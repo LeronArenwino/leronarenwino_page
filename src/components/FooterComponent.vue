@@ -2,9 +2,13 @@
   <footer class="p-4 bg-white md:p-8 lg:p-10 dark:bg-gray-800">
     <div class="mx-auto max-w-screen-xl text-center">
       <a
-        href="#"
+        href="https://leronarenwino.com"
         class="flex justify-center items-center text-2xl font-semibold text-gray-900 dark:text-white"
-      >
+        ><img
+          src="../assets/logo.png"
+          class="mr-3 h-6 sm:h-9"
+          alt="Leron Logo"
+        />
         LeronArenwino
       </a>
       <p class="my-6 text-gray-500 dark:text-gray-400">
