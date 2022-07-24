@@ -93,3 +93,38 @@
     </div>
   </section>
 </template>
+
+<script>
+import { initializeApp } from "firebase/app";
+import config from "@/utils/firebase.config.js";
+import { getFirestore, collection, getDocs } from "firebase/firestore/lite";
+
+const app = initializeApp(config.firebaseConfig);
+const db = getFirestore(app);
+
+const collectionName = "projects";
+
+export default {
+  name: "PortfolioView",
+  components: {},
+  data() {
+    return {
+      projects: [],
+    };
+  },
+  methods: {
+    // Get a list of cities from your database
+    async getProjects() {
+      this.projects = [];
+      const querySnapshot = await getDocs(collection(db, collectionName));
+      querySnapshot.forEach((doc) => {
+        // doc.data() is never undefined for query doc snapshots
+        this.projects.push({ ...doc.data(), id: doc.id });
+      });
+    },
+  },
+  created() {
+    this.getProjects();
+  },
+};
+</script>
