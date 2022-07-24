@@ -41,7 +41,9 @@
                   src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png"
                   alt="Bonnie Green avatar"
                 />
-                <span class="font-medium dark:text-white"> GitHub </span>
+                <a :href="project.link_github"
+                  ><span class="font-medium dark:text-white"> GitHub </span></a
+                >
               </div>
               <template v-if="project.link_website != ''">
                 <a
