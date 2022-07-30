@@ -12,9 +12,9 @@
     "@heroicons/vue": "^1.0.6",
     "firebase": "^9.9.1",
     "flowbite": "^1.5.1",
+    "pinia": "^2.0.17",
     "vue": "^3.2.37",
-    "vue-router": "^4.1.2",
-    "vuex": "^4.0.2"
+    "vue-router": "^4.1.2"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.1.0",
@@ -27,5 +27,20 @@
     "prettier": "^2.5.1",
     "tailwindcss": "^3.1.6",
     "vite": "^3.0.1"
-  }
+  },
+  "description": "This template should help get you started developing with Vue 3 in Vite.",
+  "main": "index.html",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LeronArenwino/leronarenwino_page.git"
+  },
+  "keywords": [
+    "Vuejs"
+  ],
+  "author": "Francisco Dueñas",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/LeronArenwino/leronarenwino_page/issues"
+  },
+  "homepage": "https://github.com/LeronArenwino/leronarenwino_page#readme"
 }
