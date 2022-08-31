@@ -79,5 +79,18 @@ export default {
   data() {
     return {};
   },
+  methods: {
+    redirectTo(id, dir) {
+      let project = JSON.parse(
+        // eslint-disable-next-line prettier/prettier
+        JSON.stringify(store.projects.find((x) => x.id === id)),
+      );
+      if (dir === "github") {
+        window.open(project.link_github, "_blank");
+      } else if (dir === "website") {
+        window.open(project.link_website, "_blank");
+      }
+    },
+  },
 };
 </script>
