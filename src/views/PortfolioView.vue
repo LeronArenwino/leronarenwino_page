@@ -73,47 +73,11 @@ const store = useProjectStore();
 </template>
 
 <script>
-import { initializeApp } from "firebase/app";
-import config from "@/utils/firebase.config.js";
-import { getFirestore, collection, getDocs } from "firebase/firestore/lite";
-
-const app = initializeApp(config.firebaseConfig);
-const db = getFirestore(app);
-
-const collectionName = "projects";
-
 export default {
   name: "PortfolioView",
   components: {},
   data() {
-    return {
-      projects: [],
-    };
-  },
-  methods: {
-    // Get a list of cities from your database
-    async getProjects() {
-      this.projects = [];
-      const querySnapshot = await getDocs(collection(db, collectionName));
-      querySnapshot.forEach((doc) => {
-        // doc.data() is never undefined for query doc snapshots
-        this.projects.push({ ...doc.data(), id: doc.id });
-      });
-    },
-    redirectTo(id, dir) {
-      let project = JSON.parse(
-        // eslint-disable-next-line prettier/prettier
-        JSON.stringify(this.projects.find((x) => x.id === id)),
-      );
-      if (dir === "github") {
-        window.open(project.link_github, "_blank");
-      } else if (dir === "website") {
-        window.open(project.link_website, "_blank");
-      }
-    },
-  },
-  created() {
-    this.getProjects();
+    return {};
   },
 };
 </script>
