@@ -49,7 +49,7 @@ const store = useProjectStore();
                 />
                 <button
                   type="button"
-                  @click="redirectTo('github', project.link_github)"
+                  @click="redirectTo(project.link_github)"
                   class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-full text-sm px-5 py-2.5 mr-2 my-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
                 >
                   GitHub
@@ -58,7 +58,7 @@ const store = useProjectStore();
               <template v-if="project.link_website != ''">
                 <button
                   type="button"
-                  @click="redirectTo('website', project.link_website)"
+                  @click="redirectTo(project.link_website)"
                   class="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-full text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700"
                 >
                   Look the project!
@@ -80,11 +80,11 @@ export default {
     return {};
   },
   methods: {
-    redirectTo(typeSite, url) {
-      if (typeSite === "github") {
+    redirectTo(url) {
+      if (url.includes("http")) {
         window.open(url, "_blank");
-      } else if (typeSite === "website") {
-        window.open(url, "_blank");
+      } else {
+        this.$router.push(url);
       }
     },
   },
