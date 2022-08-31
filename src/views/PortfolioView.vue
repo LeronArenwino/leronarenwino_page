@@ -35,7 +35,7 @@ const store = useProjectStore();
             <h2
               class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
             >
-              <a href="">{{ project.name }}</a>
+              <h5>{{ project.name }}</h5>
             </h2>
             <p class="mb-5 font-light text-gray-500 dark:text-gray-400">
               {{ project.description }}
