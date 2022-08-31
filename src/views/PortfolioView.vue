@@ -49,7 +49,7 @@ const store = useProjectStore();
                 />
                 <button
                   type="button"
-                  @click="redirectTo(project.id, 'github')"
+                  @click="redirectTo('github', project.link_github)"
                   class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-full text-sm px-5 py-2.5 mr-2 my-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
                 >
                   GitHub
@@ -58,7 +58,7 @@ const store = useProjectStore();
               <template v-if="project.link_website != ''">
                 <button
                   type="button"
-                  @click="redirectTo(project.id, 'website')"
+                  @click="redirectTo('website', project.link_website)"
                   class="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-full text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700"
                 >
                   Look the project!
@@ -80,15 +80,11 @@ export default {
     return {};
   },
   methods: {
-    redirectTo(id, dir) {
-      let project = JSON.parse(
-        // eslint-disable-next-line prettier/prettier
-        JSON.stringify(store.projects.find((x) => x.id === id)),
-      );
-      if (dir === "github") {
-        window.open(project.link_github, "_blank");
-      } else if (dir === "website") {
-        window.open(project.link_website, "_blank");
+    redirectTo(typeSite, url) {
+      if (typeSite === "github") {
+        window.open(url, "_blank");
+      } else if (typeSite === "website") {
+        window.open(url, "_blank");
       }
     },
   },
