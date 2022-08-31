@@ -38,21 +38,26 @@
               <div class="flex items-center space-x-4">
                 <img
                   class="w-7 h-7 rounded-full"
-                  src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png"
-                  alt="Bonnie Green avatar"
+                  src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
+                  alt="Logo GitHub"
                 />
-                <a :href="project.link_github"
-                  ><span class="font-medium dark:text-white"> GitHub </span></a
+                <button
+                  type="button"
+                  @click="redirectTo(project.id, 'github')"
+                  class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-full text-sm px-5 py-2.5 mr-2 my-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
                 >
+                  GitHub
+                </button>
               </div>
               <template v-if="project.link_website != ''">
-                <a
-                  :href="project.link_website"
-                  class="inline-flex items-center font-medium text-primary-600 dark:text-primary-500 hover:underline"
+                <button
+                  type="button"
+                  @click="redirectTo(project.id, 'website')"
+                  class="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-full text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700"
                 >
                   Look the project!
-                </a></template
-              >
+                </button>
+              </template>
             </div>
           </article></template
         >
@@ -88,6 +93,17 @@ export default {
         // doc.data() is never undefined for query doc snapshots
         this.projects.push({ ...doc.data(), id: doc.id });
       });
+    },
+    redirectTo(id, dir) {
+      let project = JSON.parse(
+        // eslint-disable-next-line prettier/prettier
+        JSON.stringify(this.projects.find((x) => x.id === id)),
+      );
+      if (dir === "github") {
+        window.open(project.link_github, "_blank");
+      } else if (dir === "website") {
+        window.open(project.link_website, "_blank");
+      }
     },
   },
   created() {
