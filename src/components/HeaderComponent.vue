@@ -4,16 +4,18 @@
       <div
         class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl"
       >
-        <a href="https://leronarenwino.com" class="flex items-center">
-          <img
-            src="../assets/logo.png"
-            class="mr-3 h-6 sm:h-9"
-            alt="Leron Logo"
-          /><span
-            class="self-center text-xl font-semibold whitespace-nowrap dark:text-white"
-            >Francisco Dueñas</span
-          >
-        </a>
+        <router-link to="/">
+          <a class="flex items-center">
+            <img
+              src="../assets/logo.png"
+              class="mr-3 h-6 sm:h-9"
+              alt="Leron Logo"
+            /><span
+              class="self-center text-xl font-semibold whitespace-nowrap dark:text-white"
+              >Francisco Dueñas</span
+            >
+          </a></router-link
+        >
         <div class="flex items-center lg:order-2">
           <button
             data-collapse-toggle="navbar-default"
