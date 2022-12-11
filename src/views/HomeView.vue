@@ -5,24 +5,27 @@ const store = useProjectStore();
 </script>
 
 <template>
-  <main id="home" class="container mx-auto bg-white dark:bg-gray-900">
+  <main id="home" class="container mx-auto bg-transparent dark:bg-gray-900">
     <section
       class="grid gap-4 py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-12 h-screen place-content-center text-center"
     >
       <h1
-        class="my-4 text-4xl text-gray-900 md:text-6xl lg:text-8xl dark:text-white"
+        class="my-4 text-4xl text-gray-900 md:text-6xl lg:text-8xl dark:text-white font-medium"
       >
-        Hello, welcome!
+        <span
+          class="text-transparent bg-clip-text bg-gradient-to-r to-teal-700 from-emerald-700"
+          >Hello, welcome!</span
+        >
       </h1>
       <p
-        class="mb-8 text-lg font-normal text-gray-900 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400"
+        class="mb-8 text-lg font-thin text-gray-900 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400"
       >
         I'm a system engineer student of National University of Colombia who is
         interested in development of applications. I have worked on different
         projects, developed mainly with Java, Python and C.
       </p>
     </section>
-    <section id="portfolio" class="bg-white dark:bg-gray-900">
+    <section id="portfolio" class="bg-transparent dark:bg-gray-900">
       <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
         <div class="mx-auto max-w-screen-sm text-center lg:mb-16 mb-8">
           <h1
@@ -92,7 +95,7 @@ const store = useProjectStore();
 
 <script>
 export default {
-  name: "MainView",
+  name: "HomeView",
   components: {},
   data() {
     return {};
