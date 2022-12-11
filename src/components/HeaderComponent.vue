@@ -10,12 +10,8 @@
               src="../assets/logo.png"
               class="mr-3 h-6 sm:h-9"
               alt="Leron Logo"
-            /><span
-              class="self-center text-xl font-semibold whitespace-nowrap dark:text-white"
-              >Francisco Dueñas</span
-            >
-          </a></router-link
-        >
+            /> </a
+        ></router-link>
         <div class="flex items-center lg:order-2">
           <button
             data-collapse-toggle="navbar-default"
@@ -24,9 +20,8 @@
             aria-controls="navbar-default"
             aria-expanded="false"
           >
-            <span class="sr-only">Open main menu</span>
             <svg
-              class="w-6 h-6"
+              class="w-6 h-4"
               fill="currentColor"
               viewBox="0 0 20 20"
               xmlns="http://www.w3.org/2000/svg"
@@ -59,68 +54,36 @@
             class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0"
           >
             <li>
-              <template v-if="$route.name == 'home'">
-                <a
-                  class="block py-2 pr-4 pl-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white"
-                  aria-current="page"
-                  ><router-link to="/">Home</router-link></a
-                >
-              </template>
-              <template v-else>
-                <a
-                  class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
-                  aria-current="page"
-                  ><router-link to="/">Home</router-link></a
-                >
-              </template>
+              <a
+                class="block py-2 pr-4 pl-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white"
+                aria-current="page"
+                href="#home"
+                >Home</a
+              >
             </li>
             <li>
-              <template v-if="$route.name == 'portfolio'">
-                <a
-                  class="block py-2 pr-4 pl-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white"
-                  aria-current="page"
-                  ><router-link to="/portfolio">Portfolio</router-link></a
-                >
-              </template>
-              <template v-else>
-                <a
-                  class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
-                  aria-current="page"
-                  ><router-link to="/portfolio">Portfolio</router-link></a
-                >
-              </template>
+              <a
+                class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
+                aria-current="page"
+                href="#portfolio"
+                >Portfolio</a
+              >
             </li>
             <li>
-              <template v-if="$route.name == 'knowledge'">
-                <a
-                  class="block py-2 pr-4 pl-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white"
-                  aria-current="page"
-                  ><router-link to="/knowledge">Knowledge</router-link></a
-                >
-              </template>
-              <template v-else>
-                <a
-                  class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
-                  aria-current="page"
-                  ><router-link to="/knowledge">Knowledge</router-link></a
-                >
-              </template>
+              <a
+                class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
+                aria-current="page"
+                href="#knowledge"
+                >Knowledge</a
+              >
             </li>
             <li>
-              <template v-if="$route.name == 'about'">
-                <a
-                  class="block py-2 pr-4 pl-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white"
-                  aria-current="page"
-                  ><router-link to="/about">About me</router-link></a
-                >
-              </template>
-              <template v-else>
-                <a
-                  class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
-                  aria-current="page"
-                  ><router-link to="/about">About me</router-link></a
-                >
-              </template>
+              <a
+                class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
+                aria-current="page"
+                href="#about"
+                >About me</a
+              >
             </li>
           </ul>
         </div>
