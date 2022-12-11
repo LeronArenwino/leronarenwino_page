@@ -59,7 +59,7 @@
               <a
                 class="block py-2 pr-4 pl-3 text-white bg-emerald-700 rounded md:bg-transparent md:text-emerald-700 md:p-0 dark:text-white"
                 aria-current="page"
-                href="#home"
+                href="#app"
                 >Home</a
               >
             </li>
