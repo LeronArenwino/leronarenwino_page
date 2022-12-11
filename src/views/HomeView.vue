@@ -5,7 +5,7 @@ const store = useProjectStore();
 </script>
 
 <template>
-  <main id="home" class="container mx-auto bg-transparent dark:bg-gray-900">
+  <main class="container mx-auto bg-transparent dark:bg-gray-900">
     <section
       class="grid gap-4 py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-12 h-screen place-content-center text-center"
     >
