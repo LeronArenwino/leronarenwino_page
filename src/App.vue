@@ -2,11 +2,12 @@
 import { RouterView } from "vue-router";
 import HeaderComponent from "@/components/HeaderComponent.vue";
 import FooterComponent from "./components/FooterComponent.vue";
-import { useProjectStore } from "./stores/index";
+import { useDataStore } from "@/stores/index.js";
 
-const store = useProjectStore();
+const store = useDataStore();
 
 store.getProjects();
+store.getKnowledges();
 </script>
 
 <template>
