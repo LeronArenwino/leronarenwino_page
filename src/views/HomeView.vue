@@ -1,7 +1,7 @@
 <script setup>
-import { useProjectStore } from "@/stores/index.js";
+import { useDataStore } from "@/stores/index.js";
 
-const store = useProjectStore();
+const store = useDataStore();
 </script>
 
 <template>
@@ -22,7 +22,7 @@ const store = useProjectStore();
       >
         I'm a system engineer student of National University of Colombia who is
         interested in development of applications. I have worked on different
-        projects, developed mainly with Java, Python and C.
+        projects, developed mainly with Java, Python, Javascript and C.
       </p>
     </section>
     <section id="portfolio" class="container bg-transparent dark:bg-gray-900">
@@ -112,38 +112,39 @@ const store = useProjectStore();
         <div
           class="space-y-8 lg:grid lg:grid-cols-3 sm:gap-6 xl:gap-10 lg:space-y-0"
         >
-          <div
-            class="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-gradient-to-r to-white bg-emerald-200 from-emerald-300 rounded-lg shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white"
-          >
-            <h3 class="mb-4 text-2xl font-semibold">Programming languages</h3>
-            <p class="font-light text-black sm:text-lg dark:text-gray-400">
-              My mastery of the programming language from 0% to 100%.
-            </p>
-            <ul role="list" class="mb-8 space-y-4 text-left">
-              <li
-                class="flex flex-col justify-center items-center space-y-2 my-2"
-              >
-                <img class="h-16" src="../assets/java-dark.svg" alt="" />
-                <div
-                  class="bg-emerald-600 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full"
-                  style="width: 45%"
+          <template v-for="knowledge of store.knowledges" :key="knowledge.id">
+            <div
+              class="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-gradient-to-r to-white bg-emerald-200 from-emerald-300 rounded-lg shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white"
+            >
+              <h3 class="mb-4 text-2xl font-semibold">{{ knowledge.name }}</h3>
+              <p class="font-light text-black sm:text-lg dark:text-gray-400">
+                {{ knowledge.description }}
+              </p>
+              <ul role="list" class="mb-8 space-y-4 text-left">
+                <template
+                  v-for="(img, index) of knowledge.dataImg"
+                  :key="index"
                 >
-                  45%
-                </div>
-              </li>
-              <li
-                class="flex flex-col justify-center items-center space-y-2 my-2"
-              >
-                <img class="h-16" src="../assets/python-dark.svg" alt="" />
-                <div
-                  class="bg-emerald-600 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full"
-                  style="width: 45%"
-                >
-                  45%
-                </div>
-              </li>
-            </ul>
-          </div>
+                  <li class="flex flex-col space-y-2 my-2">
+                    <img
+                      class="h-12"
+                      :src="'/src/assets/' + img"
+                      :alt="'Logo de ' + knowledge.dataName[index]"
+                    /><span
+                      class="text-base font-medium text-black dark:text-white"
+                      >{{ knowledge.dataName[index] }}</span
+                    >
+                    <div
+                      class="bg-emerald-600 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full"
+                      :style="{ width: knowledge.dataValue[index] + '%' }"
+                    >
+                      {{ knowledge.dataValue[index] + "%" }}
+                    </div>
+                  </li>
+                </template>
+              </ul>
+            </div>
+          </template>
         </div>
       </div>
     </section>
