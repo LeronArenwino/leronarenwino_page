@@ -128,7 +128,7 @@ const store = useDataStore();
                   <li class="flex flex-col space-y-2 my-2">
                     <img
                       class="h-12"
-                      :src="'/src/assets/' + img"
+                      :src="img"
                       :alt="'Logo de ' + knowledge.dataName[index]"
                     /><span
                       class="text-base font-medium text-black dark:text-white"
