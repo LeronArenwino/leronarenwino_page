@@ -7,7 +7,7 @@ const store = useDataStore();
 <template>
   <main class="container mx-auto bg-transparent dark:bg-gray-900">
     <section
-      class="grid gap-4 py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-12 h-screen place-content-center text-center"
+      class="grid gap-4 py-8 px-4 mx-auto max-w-screen-xl lg:px-12 h-screen place-content-center text-center"
     >
       <h1
         class="my-4 text-4xl text-black md:text-6xl lg:text-8xl dark:text-white font-medium"
@@ -25,14 +25,17 @@ const store = useDataStore();
         projects, developed mainly with Java, Python, Javascript and C.
       </p>
     </section>
-    <section id="portfolio" class="container bg-transparent dark:bg-gray-900">
-      <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
+    <section
+      id="portfolio"
+      class="container bg-transparent dark:bg-gray-900 my-16"
+    >
+      <div class="py-16 px-4 mx-auto max-w-screen-xl lg:px-6">
         <div class="mx-auto max-w-screen-sm text-center lg:mb-16 mb-8">
           <h1
             class="my-4 text-4xl leading-none text-black md:text-5xl lg:text-6xl dark:text-white"
           >
             <span
-              class="text-transparent bg-clip-text bg-gradient-to-r to-teal-700 from-emerald-700"
+              class="text-transparent font-medium bg-clip-text bg-gradient-to-r to-teal-700 from-emerald-700"
               >Portfolio</span
             >
           </h1>
@@ -43,7 +46,7 @@ const store = useDataStore();
         <div class="grid gap-8 lg:grid-cols-2">
           <template v-for="project of store.projects" :key="project.id">
             <article
-              class="p-6 bg-gradient-to-r to-white bg-emerald-200 from-emerald-300 rounded-lg shadow-lg dark:bg-gray-800 dark:border-gray-700"
+              class="p-6 bg-gradient-to-r to-white bg-emerald-200 from-emerald-300 rounded-lg shadow-lg dark:bg-gray-800 dark:border-gray-700 transform transition-all hover:-translate-y-2 hover:shadow-2xl"
             >
               <div class="flex justify-between items-center mb-5 text-gray-500">
                 <span
@@ -66,16 +69,16 @@ const store = useDataStore();
               </p>
               <div class="flex justify-between items-center">
                 <div class="flex items-center space-x-4">
-                  <img
-                    class="w-7 h-7 rounded-full"
-                    src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
-                    alt="Logo GitHub"
-                  />
                   <button
                     type="button"
                     @click="redirectTo(project.link_github)"
-                    class="text-white bg-black focus:outline-none hover:bg-gray-800 focus:ring-4 focus:ring-gray-200 font-medium rounded-full text-sm px-5 py-2.5 mr-2 my-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
+                    class="flex justify-center items-center text-black transition ease-in-out delay-50 bg-white hover:-translate-y-1 hover:scale-110 focus:outline-none hover:bg-emerald-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-full text-sm px-5 py-2.5 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
                   >
+                    <img
+                      class="w-6 h-6 rounded-full mr-2"
+                      src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
+                      alt="Logo GitHub"
+                    />
                     GitHub
                   </button>
                 </div>
@@ -83,7 +86,7 @@ const store = useDataStore();
                   <button
                     type="button"
                     @click="redirectTo(project.link_website)"
-                    class="text-white bg-emerald-400 hover:bg-emerald-500 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-full text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700"
+                    class="text-white transition ease-in-out delay-50 bg-emerald-400 hover:-translate-y-1 hover:scale-110 hover:bg-emerald-500 duration-300 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-full text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700"
                   >
                     Look the project!
                   </button>
@@ -94,14 +97,14 @@ const store = useDataStore();
         </div>
       </div>
     </section>
-    <section id="knowledge" class="bg-transparent dark:bg-gray-900">
-      <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
+    <section id="knowledge" class="bg-transparent dark:bg-gray-900 my-16">
+      <div class="py-16 px-4 mx-auto max-w-screen-xl lg:px-6">
         <div class="mx-auto max-w-screen-md text-center mb-8 lg:mb-12">
           <h1
             class="my-4 text-4xl leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white"
           >
             <span
-              class="text-transparent bg-clip-text bg-gradient-to-r to-teal-700 from-emerald-700"
+              class="text-transparent font-medium bg-clip-text bg-gradient-to-r to-teal-700 from-emerald-700"
               >Knowledge</span
             >
           </h1>
@@ -145,6 +148,83 @@ const store = useDataStore();
               </ul>
             </div>
           </template>
+        </div>
+      </div>
+    </section>
+    <section id="about" class="bg-transparent dark:bg-gray-900 my-16">
+      <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
+        <div class="max-w-screen-md mb-8 lg:mb-16">
+          <h2
+            class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white"
+          >
+            About me
+          </h2>
+          <p class="text-gray-500 sm:text-xl dark:text-gray-400">
+            Hello!, I'm a student of systems and computer engineer with
+            experience in Frontend developer with 1 year of experience in
+            software development for single page app and other information
+            technologies.
+          </p>
+        </div>
+        <div
+          class="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0"
+        >
+          <div>
+            <h3 class="mb-2 text-xl font-bold dark:text-white">
+              Web development
+            </h3>
+            <p class="text-gray-500 dark:text-gray-400">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s, when an unknown printer took a galley of
+              type and scrambled it to make a type specimen book.
+            </p>
+          </div>
+          <div>
+            <h3 class="mb-2 text-xl font-bold dark:text-white">Design</h3>
+            <p class="text-gray-500 dark:text-gray-400">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s, when an unknown printer took a galley of
+              type and scrambled it to make a type specimen book.
+            </p>
+          </div>
+          <div>
+            <h3 class="mb-2 text-xl font-bold dark:text-white">Automation</h3>
+            <p class="text-gray-500 dark:text-gray-400">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s, when an unknown printer took a galley of
+              type and scrambled it to make a type specimen book.
+            </p>
+          </div>
+          <div>
+            <h3 class="mb-2 text-xl font-bold dark:text-white">Languages</h3>
+            <p class="text-gray-500 dark:text-gray-400">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s, when an unknown printer took a galley of
+              type and scrambled it to make a type specimen book.
+            </p>
+          </div>
+          <div>
+            <h3 class="mb-2 text-xl font-bold dark:text-white">Work</h3>
+            <p class="text-gray-500 dark:text-gray-400">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s, when an unknown printer took a galley of
+              type and scrambled it to make a type specimen book.
+            </p>
+          </div>
+          <div>
+            <h3 class="mb-2 text-xl font-bold dark:text-white">Others</h3>
+            <p class="text-gray-500 dark:text-gray-400">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s, when an unknown printer took a galley of
+              type and scrambled it to make a type specimen book.
+            </p>
+          </div>
         </div>
       </div>
     </section>
