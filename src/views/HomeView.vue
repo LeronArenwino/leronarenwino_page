@@ -21,9 +21,9 @@ const store = useDataStore();
       <p
         class="mb-8 text-lg font-thin text-black lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400"
       >
-        I'm a system engineer student of National University of Colombia who is
-        interested in development of applications. I have worked on different
-        projects, developed mainly with Java, Python, Javascript and C.
+        I'm a systems engineer from National University of Colombia interested
+        in development of applications. I have worked on different projects,
+        developed mainly with Java, Python, Javascript and C.
       </p>
     </section>
     <section
