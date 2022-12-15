@@ -16,11 +16,27 @@ import {
   faLinkedin,
   faGithub,
   faTwitter,
+  faJava,
+  faPython,
+  faJs,
+  faVuejs,
+  faBootstrap,
 } from "@fortawesome/free-brands-svg-icons";
-import { faUserSecret } from "@fortawesome/free-solid-svg-icons";
+import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
 
 /* add icons to the library */
-library.add(faUserSecret, faLinkedin, faGithub, faTwitter);
+library.add(
+  faMoon,
+  faSun,
+  faLinkedin,
+  faGithub,
+  faTwitter,
+  faJava,
+  faPython,
+  faJs,
+  faVuejs,
+  faBootstrap
+);
 
 const app = createApp(App);
 
