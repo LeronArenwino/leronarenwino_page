@@ -49,9 +49,11 @@ const store = useDataStore();
             <article
               class="p-6 bg-gradient-to-r to-white via-emerald-200 from-emerald-300 rounded-lg shadow-lg dark:bg-gradient-to-r dark:to-gray-800 dark:from-emerald-800 transform transition-all hover:-translate-y-2 hover:shadow-2xl"
             >
-              <div class="flex justify-between items-center mb-5 text-gray-500">
+              <div
+                class="flex flex-col justify-center space-y-2 sm:flex-row sm:space-y-0 sm:justify-between items-center mb-5 text-gray-500"
+              >
                 <span
-                  class="bg-emerald-100 text-emerald-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-emerald-200 dark:text-emerald-800"
+                  class="bg-emerald-100 text-center text-emerald-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-emerald-200 dark:text-emerald-800"
                 >
                   {{ project.development }}
                 </span>
@@ -61,31 +63,30 @@ const store = useDataStore();
                 >
               </div>
               <h2
-                class="mb-2 text-2xl font-normal text-gray-900 dark:text-white"
+                class="mb-2 text-2xl font-normal text-center lg:text-left text-gray-900 dark:text-white"
               >
                 <h5>{{ project.name }}</h5>
               </h2>
-              <p class="mb-5 font-light text-black dark:text-gray-300">
+              <p
+                class="mb-5 font-light text-center lg:text-left text-black dark:text-gray-300"
+              >
                 {{ project.description }}
               </p>
-              <div class="flex justify-between items-center">
+              <div
+                class="flex flex-col space-y-2 justify-center sm:flex-row sm:space-y-0 sm:justify-between items-center"
+              >
                 <div class="flex items-center space-x-4">
                   <button
                     type="button"
                     @click="redirectTo(project.link_github)"
                     class="flex justify-center items-center text-black transition ease-in-out delay-50 bg-white hover:-translate-y-1 hover:scale-110 focus:outline-none hover:bg-emerald-100 focus:ring-4 font-medium rounded-full text-sm px-5 py-2.5 dark:bg-emerald-500 dark:text-white dark:hover:bg-emerald-400"
                   >
-                    <svg
-                      class="mr-2 fill-current text-black dark:text-white"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
-                      />
-                    </svg>
+                    <font-awesome-icon
+                      icon="fa-brands fa-github"
+                      class="w-6 h-6 fill-current text-black dark:text-white mr-2"
+                      beat
+                      style="--fa-animation-duration: 2.5s"
+                    />
                     GitHub
                   </button>
                 </div>
@@ -130,27 +131,43 @@ const store = useDataStore();
               <p class="font-light text-black sm:text-lg dark:text-gray-400">
                 {{ knowledge.description }}
               </p>
-              <ul role="list" class="mb-8 space-y-4 text-left">
+              <ul role="list" class="mb-4text-center">
                 <template
                   v-for="(img, index) of knowledge.dataImg"
                   :key="index"
                 >
-                  <li class="flex flex-col space-y-2 my-2">
-                    <img
-                      class="h-12"
-                      :src="img"
-                      :alt="'Logo de ' + knowledge.dataName[index]"
-                    /><span
+                  <li class="flex flex-row justify-center mt-2">
+                    <template v-if="img === 'not'"></template
+                    ><template v-else>
+                      <font-awesome-icon
+                        :icon="img"
+                        class="w-12 h-12 fill-current text-black dark:text-white mx-2"
+                        fade
+                        style="
+                          --fa-animation-duration: 3s;
+                          --fa-fade-opacity: 0.7;
+                        "
+                      />
+                    </template>
+                  </li>
+                  <div class="flex justify-between">
+                    <span
                       class="text-base font-medium text-black dark:text-white"
                       >{{ knowledge.dataName[index] }}</span
                     >
-                    <div
-                      class="bg-emerald-600 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full"
-                      :style="{ width: knowledge.dataValue[index] + '%' }"
+                    <span
+                      class="text-sm font-medium text-black dark:text-white"
+                      >{{ knowledge.dataValue[index] + "%" }}</span
                     >
-                      {{ knowledge.dataValue[index] + "%" }}
-                    </div>
-                  </li>
+                  </div>
+                  <div
+                    class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700"
+                  >
+                    <div
+                      class="bg-emerald-600 h-2.5 rounded-full"
+                      :style="{ width: knowledge.dataValue[index] + '%' }"
+                    ></div>
+                  </div>
                 </template>
               </ul>
             </div>
