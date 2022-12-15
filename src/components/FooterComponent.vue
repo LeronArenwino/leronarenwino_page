@@ -1,9 +1,9 @@
 <template>
-  <footer class="p-4 bg-white md:p-8 lg:p-10 dark:bg-gray-800">
+  <footer class="p-4 bg-emerald-400 md:p-8 lg:p-10 dark:bg-gray-800">
     <div class="mx-auto max-w-screen-xl text-center">
       <router-link to="/"
         ><a
-          class="flex justify-center items-center text-2xl font-semibold text-gray-900 dark:text-white"
+          class="flex justify-center items-center text-2xl font-semibold text-black dark:text-white"
           ><img
             src="../assets/logo.png"
             class="mr-3 h-6 sm:h-9"
@@ -12,18 +12,16 @@
           LeronArenwino
         </a></router-link
       >
-      <p class="my-6 text-gray-500 dark:text-gray-400">
+      <p class="my-6 text-gray-800 dark:text-gray-200">
         Website with all information about me.
       </p>
       <ul
         class="flex flex-wrap justify-center items-center text-gray-900 dark:text-white"
       >
         <li class="flex justify-center items-center">
-          <a
-            class="mr-4 md:mr-8"
-            target="_blank"
-            href="https://www.linkedin.com/in/leronarenwino/"
+          <a target="_blank" href="https://www.linkedin.com/in/leronarenwino/"
             ><svg
+              class="fill-current text-black dark:text-white"
               xmlns="http://www.w3.org/2000/svg"
               width="64"
               height="64"
@@ -35,11 +33,9 @@
           ></a>
         </li>
         <li class="flex justify-center items-center">
-          <a
-            class="mr-4 md:mr-8"
-            target="_blank"
-            href="https://github.com/LeronArenwino"
+          <a target="_blank" href="https://github.com/LeronArenwino"
             ><svg
+              class="fill-current text-black dark:text-white"
               xmlns="http://www.w3.org/2000/svg"
               width="64"
               height="64"
@@ -51,11 +47,9 @@
           ></a>
         </li>
         <li class="flex justify-center items-center">
-          <a
-            class="mr-4 md:mr-8"
-            target="_blank"
-            href="https://twitter.com/LeronArenwino"
+          <a target="_blank" href="https://twitter.com/LeronArenwino"
             ><svg
+              class="fill-current text-black dark:text-white"
               xmlns="http://www.w3.org/2000/svg"
               width="64"
               height="64"
@@ -67,7 +61,7 @@
           ></a>
         </li>
       </ul>
-      <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400"
+      <span class="text-sm text-gray-900 sm:text-center dark:text-gray-300"
         >© 2018-2022
         <a class="hover:underline"
           ><router-link to="/">Francisco Dueñas</router-link></a
