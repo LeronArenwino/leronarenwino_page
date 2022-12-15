@@ -91,5 +91,25 @@
         </div>
       </div>
     </nav>
+    <button
+      id="theme-toggle"
+      type="button"
+      class="w-10 h-10 text-black bg-emerald-300 -400 hover:bg-gray-900 hover:text-white dark:bg-gray-700 dark:text-white dark:hover:bg-emerald-300 dark:hover:text-black rounded-lg text-sm p-2.5 fixed bottom-0 right-0 z-20 mx-2 my-2"
+    >
+      <font-awesome-icon
+        id="theme-toggle-dark-icon"
+        icon="fa-solid fa-moon"
+        class="hidden fill-current"
+        beat
+        style="--fa-animation-duration: 2s; --fa-beat-scale: 1.5"
+      />
+      <font-awesome-icon
+        id="theme-toggle-light-icon"
+        icon="fa-solid fa-sun"
+        class="hidden fill-current"
+        beat
+        style="--fa-animation-duration: 2s; --fa-beat-scale: 1.5"
+      />
+    </button>
   </header>
 </template>
