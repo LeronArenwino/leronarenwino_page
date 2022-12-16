@@ -75,7 +75,7 @@ const store = useDataStore();
               <div
                 class="flex flex-col space-y-2 justify-center sm:flex-row sm:space-y-0 sm:justify-between items-center"
               >
-                <div class="flex items-center space-x-4">
+                <div class="flex items-center">
                   <button
                     type="button"
                     @click="redirectTo(project.link_github)"
@@ -94,7 +94,7 @@ const store = useDataStore();
                   <button
                     type="button"
                     @click="redirectTo(project.link_website)"
-                    class="text-white transition ease-in-out delay-50 bg-emerald-400 hover:-translate-y-1 hover:scale-110 hover:bg-emerald-500 duration-300 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-full text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-900 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700"
+                    class="text-white transition ease-in-out delay-50 bg-emerald-400 hover:-translate-y-1 hover:scale-110 hover:bg-emerald-500 duration-300 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-full text-sm px-5 py-2.5 dark:bg-gray-900 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700"
                   >
                     Look the project!
                   </button>
