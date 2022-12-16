@@ -92,9 +92,12 @@
       </div>
     </nav>
     <button
+      data-tooltip-target="tooltip-left"
+      data-tooltip-placement="left"
       id="theme-toggle"
       type="button"
       class="w-10 h-10 text-black bg-emerald-300 -400 hover:bg-gray-900 hover:text-white dark:bg-gray-700 dark:text-white dark:hover:bg-emerald-300 dark:hover:text-black rounded-lg text-sm p-2.5 fixed bottom-0 right-0 z-20 mx-2 my-2"
+      @click="getColorTheme"
     >
       <font-awesome-icon
         id="theme-toggle-dark-icon"
@@ -111,5 +114,46 @@
         style="--fa-animation-duration: 2s; --fa-beat-scale: 1.5"
       />
     </button>
+    <div
+      id="tooltip-left"
+      role="tooltip"
+      class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 transition-opacity duration-300 tooltip dark:bg-emerald-300 dark:text-black"
+    >
+      {{ colorTheme }}
+      <div class="tooltip-arrow" data-popper-arrow></div>
+    </div>
   </header>
 </template>
+<script>
+export default {
+  name: "App",
+  data() {
+    return {
+      colorTheme: "",
+    };
+  },
+  methods: {
+    getColorTheme() {
+      if (localStorage.getItem("color-theme") === "dark") {
+        this.colorTheme = "Dark theme";
+      } else if (localStorage.getItem("color-theme") === "light") {
+        this.colorTheme = "Light theme";
+      } else {
+        this.colorTheme = "Error";
+      }
+    },
+    getColorThemeMounted() {
+      if (localStorage.getItem("color-theme") === "dark") {
+        this.colorTheme = "Light theme";
+      } else if (localStorage.getItem("color-theme") === "light") {
+        this.colorTheme = "Dark theme";
+      } else {
+        this.colorTheme = "Error";
+      }
+    },
+  },
+  mounted() {
+    this.getColorThemeMounted();
+  },
+};
+</script>
