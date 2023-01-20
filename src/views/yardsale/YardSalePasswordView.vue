@@ -1,32 +1,38 @@
 <template>
-  <section class="login">
-    <div class="form-container">
-      <img src="../../assets/logo_yard_sale.svg" alt="logo" class="logo" />
-      <h1 class="title">Create a new password</h1>
-      <p class="subtitle">Enter a new password for you account</p>
-      <form action="/" class="form">
-        <label for="password" class="label">Password</label>
-        <input
-          type="password"
-          id="password"
-          placeholder="*********"
-          class="input input-password"
-        />
-        <label for="new-password" class="label">Password</label>
-        <input
-          type="password"
-          id="new-password"
-          placeholder="*********"
-          class="input input-password"
-        />
-        <input
-          type="submit"
-          value="Confirm"
-          class="text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 shadow-lg shadow-green-500/50 dark:shadow-lg dark:shadow-green-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 button-primary login-button"
-        />
-      </form>
-    </div>
-  </section>
+  <main class="h-screen">
+    <section class="login">
+      <div class="form-container">
+        <img src="../../assets/logo_yard_sale.svg" alt="logo" class="logo" />
+        <h1 class="title dark:text-white">Create a new password</h1>
+        <p class="subtitle dark:text-white">
+          Enter a new password for you account
+        </p>
+        <form action="/" class="form">
+          <label for="password" class="label dark:text-white">Password</label>
+          <input
+            type="password"
+            id="password"
+            placeholder="*********"
+            class="input input-password"
+          />
+          <label for="new-password" class="label dark:text-white"
+            >Password</label
+          >
+          <input
+            type="password"
+            id="new-password"
+            placeholder="*********"
+            class="input input-password"
+          />
+          <input
+            type="submit"
+            value="Confirm"
+            class="text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 shadow-lg shadow-green-500/50 dark:shadow-lg dark:shadow-green-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 button-primary login-button"
+          />
+        </form>
+      </div>
+    </section>
+  </main>
 </template>
 
 <style scoped>
@@ -65,7 +71,6 @@
   text-align: center;
 }
 .subtitle {
-  color: var(--very-light-pink);
   font-size: var(--md);
   font-weight: 300;
   margin-bottom: 32px;
