@@ -1,24 +1,29 @@
 <template>
-  <section class="login">
-    <div class="form-container">
-      <img src="../../assets/logo_yard_sale.svg" alt="logo" class="logo" />
-      <h1 class="title">Email has been sent!</h1>
-      <p class="subtitle">
-        Please check your inbox for instrucions on how to reset the password
-      </p>
-      <div class="email-image">
-        <img src="../../assets/email.svg" alt="email" />
+  <main class="h-screen">
+    <section class="login">
+      <div class="form-container">
+        <img src="../../assets/logo_yard_sale.svg" alt="logo" class="logo" />
+        <h1 class="title text-black dark:text-white">Email has been sent!</h1>
+        <p class="subtitle text-black dark:text-white">
+          Please check your inbox for instrucions on how to reset the password
+        </p>
+        <div class="email-image bg-green-400 dark:bg-green-500">
+          <font-awesome-icon
+            icon="fa-regular fa-envelope"
+            class="w-16 h-16 fill-current text-white dark:text-white"
+          />
+        </div>
+        <button
+          class="text-white transition ease-in-out delay-50 bg-emerald-400 hover:-translate-y-1 hover:scale-110 hover:bg-emerald-500 duration-300 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-full text-sm px-5 py-2.5 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700 mr-2 mb-2 button-primary login-button"
+        >
+          Login
+        </button>
+        <p class="resend text-black dark:text-white">
+          <span>Didn't receive the emaild?</span> <a href="/">Resend</a>
+        </p>
       </div>
-      <button
-        class="text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 shadow-lg shadow-green-500/50 dark:shadow-lg dark:shadow-green-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 button-primary login-button"
-      >
-        Login
-      </button>
-      <p class="resend">
-        <span>Didn't receive the emaild?</span><a href="/">Resend</a>
-      </p>
-    </div>
-  </section>
+    </section>
+  </main>
 </template>
 
 <style scoped>
@@ -58,7 +63,6 @@
   text-align: center;
 }
 .subtitle {
-  color: var(--very-light-pink);
   font-size: var(--md);
   font-weight: 300;
   margin-bottom: 32px;
@@ -68,7 +72,6 @@
   width: 132px;
   height: 132px;
   border-radius: 50%;
-  background-color: var(--text-input-field);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -84,11 +87,9 @@
   color: var(--very-light-pink);
 }
 .resend a {
-  color: var(--hospital-green);
   text-decoration: none;
 }
 .button-primary {
-  background-color: var(--hospital-green);
   border-radius: 8px;
   border: none;
   width: 100%;
