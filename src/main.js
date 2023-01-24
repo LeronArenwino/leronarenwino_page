@@ -23,6 +23,7 @@ import {
   faBootstrap,
 } from "@fortawesome/free-brands-svg-icons";
 import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 
 /* add icons to the library */
 library.add(
@@ -35,7 +36,8 @@ library.add(
   faPython,
   faJs,
   faVuejs,
-  faBootstrap
+  faBootstrap,
+  faEnvelope
 );
 
 const app = createApp(App);
