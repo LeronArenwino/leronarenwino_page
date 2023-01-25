@@ -27,7 +27,7 @@
           <input
             type="submit"
             value="Confirm"
-            class="text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 shadow-lg shadow-green-500/50 dark:shadow-lg dark:shadow-green-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 button-primary login-button"
+            class="text-white transition ease-in-out delay-50 bg-emerald-400 hover:-translate-y-1 hover:scale-110 hover:bg-emerald-500 duration-300 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-full text-sm px-5 py-2.5 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700 mr-2 mb-2 button-primary login-button"
           />
         </form>
       </div>
@@ -95,7 +95,6 @@
   margin-bottom: 12px;
 }
 .button-primary {
-  background-color: var(--hospital-green);
   border-radius: 8px;
   border: none;
   width: 100%;
