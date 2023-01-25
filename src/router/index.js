@@ -39,6 +39,11 @@ const router = createRouter({
           name: "yardsale-login",
           component: () => import("../views/yardsale/YardSaleLoginView.vue"),
         },
+        {
+          path: "signup",
+          name: "yardsale-signup",
+          component: () => import("../views/yardsale/YardSaleSignUpView.vue"),
+        },
       ],
     },
     { path: "/404", component: Error },
