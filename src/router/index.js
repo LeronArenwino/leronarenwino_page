@@ -22,8 +22,14 @@ const router = createRouter({
     {
       path: "/yardsale",
       name: "yardsale",
+      redirect: "/yardsale/home",
       component: () => import("../views/yardsale/YardSaleView.vue"),
       children: [
+        {
+          path: "home",
+          name: "yardsale-home",
+          component: () => import("../views/yardsale/YardSaleHomeView.vue"),
+        },
         {
           path: "email",
           name: "yardsale-email",
