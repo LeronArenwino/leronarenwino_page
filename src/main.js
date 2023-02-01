@@ -27,6 +27,7 @@ import {
   faSun,
   faCartPlus,
   faHouse,
+  faCartShopping,
 } from "@fortawesome/free-solid-svg-icons";
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 
@@ -36,6 +37,7 @@ library.add(
   faSun,
   faCartPlus,
   faHouse,
+  faCartShopping,
   faLinkedin,
   faGithub,
   faTwitter,
