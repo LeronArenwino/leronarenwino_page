@@ -8,11 +8,14 @@
         />
         <div class="product-info">
           <div>
-            <p>$120,00</p>
-            <p class="text-gray-400">Motorbike</p>
+            <p class="dark:text-white">$120,00</p>
+            <p class="text-gray-400 dark:text-gray-300">Motorbike</p>
           </div>
           <figure>
-            <font-awesome-icon class="w-8 h-8" icon="fa-solid fa-cart-plus" />
+            <font-awesome-icon
+              class="w-8 h-8 dark:text-white"
+              icon="fa-solid fa-cart-plus"
+            />
           </figure>
         </div>
       </div>
@@ -23,11 +26,14 @@
         />
         <div class="product-info">
           <div>
-            <p>$120,00</p>
-            <p class="text-gray-400">Motorbike</p>
+            <p class="dark:text-white">$120,00</p>
+            <p class="text-gray-400 dark:text-gray-300">Motorbike</p>
           </div>
           <figure>
-            <font-awesome-icon class="w-8 h-8" icon="fa-solid fa-cart-plus" />
+            <font-awesome-icon
+              class="w-8 h-8 dark:text-white"
+              icon="fa-solid fa-cart-plus"
+            />
           </figure>
         </div>
       </div>
@@ -38,11 +44,14 @@
         />
         <div class="product-info">
           <div>
-            <p>$120,00</p>
-            <p class="text-gray-400">Motorbike</p>
+            <p class="dark:text-white">$120,00</p>
+            <p class="text-gray-400 dark:text-gray-300">Motorbike</p>
           </div>
           <figure>
-            <font-awesome-icon class="w-8 h-8" icon="fa-solid fa-cart-plus" />
+            <font-awesome-icon
+              class="w-8 h-8 dark:text-white"
+              icon="fa-solid fa-cart-plus"
+            />
           </figure>
         </div>
       </div>
@@ -53,11 +62,14 @@
         />
         <div class="product-info">
           <div>
-            <p>$120,00</p>
-            <p class="text-gray-400">Motorbike</p>
+            <p class="dark:text-white">$120,00</p>
+            <p class="text-gray-400 dark:text-gray-300">Motorbike</p>
           </div>
           <figure>
-            <font-awesome-icon class="w-8 h-8" icon="fa-solid fa-cart-plus" />
+            <font-awesome-icon
+              class="w-8 h-8 dark:text-white"
+              icon="fa-solid fa-cart-plus"
+            />
           </figure>
         </div>
       </div>
@@ -68,11 +80,14 @@
         />
         <div class="product-info">
           <div>
-            <p>$120,00</p>
-            <p class="text-gray-400">Motorbike</p>
+            <p class="dark:text-white">$120,00</p>
+            <p class="text-gray-400 dark:text-gray-300">Motorbike</p>
           </div>
           <figure>
-            <font-awesome-icon class="w-8 h-8" icon="fa-solid fa-cart-plus" />
+            <font-awesome-icon
+              class="w-8 h-8 dark:text-white"
+              icon="fa-solid fa-cart-plus"
+            />
           </figure>
         </div>
       </div>
@@ -83,11 +98,14 @@
         />
         <div class="product-info">
           <div>
-            <p>$120,00</p>
-            <p class="text-gray-400">Motorbike</p>
+            <p class="dark:text-white">$120,00</p>
+            <p class="text-gray-400 dark:text-gray-300">Motorbike</p>
           </div>
           <figure>
-            <font-awesome-icon class="w-8 h-8" icon="fa-solid fa-cart-plus" />
+            <font-awesome-icon
+              class="w-8 h-8 dark:text-white"
+              icon="fa-solid fa-cart-plus"
+            />
           </figure>
         </div>
       </div>
@@ -98,11 +116,14 @@
         />
         <div class="product-info">
           <div>
-            <p>$120,00</p>
-            <p class="text-gray-400">Motorbike</p>
+            <p class="dark:text-white">$120,00</p>
+            <p class="text-gray-400 dark:text-gray-300">Motorbike</p>
           </div>
           <figure>
-            <font-awesome-icon class="w-8 h-8" icon="fa-solid fa-cart-plus" />
+            <font-awesome-icon
+              class="w-8 h-8 dark:text-white"
+              icon="fa-solid fa-cart-plus"
+            />
           </figure>
         </div>
       </div>
@@ -113,11 +134,14 @@
         />
         <div class="product-info">
           <div>
-            <p>$120,00</p>
-            <p class="text-gray-400">Motorbike</p>
+            <p class="dark:text-white">$120,00</p>
+            <p class="text-gray-400 dark:text-gray-300">Motorbike</p>
           </div>
           <figure>
-            <font-awesome-icon class="w-8 h-8" icon="fa-solid fa-cart-plus" />
+            <font-awesome-icon
+              class="w-8 h-8 dark:text-white"
+              icon="fa-solid fa-cart-plus"
+            />
           </figure>
         </div>
       </div>
@@ -128,11 +152,14 @@
         />
         <div class="product-info">
           <div>
-            <p>$120,00</p>
-            <p class="text-gray-400">Motorbike</p>
+            <p class="dark:text-white">$120,00</p>
+            <p class="text-gray-400 dark:text-gray-300">Motorbike</p>
           </div>
           <figure>
-            <font-awesome-icon class="w-8 h-8" icon="fa-solid fa-cart-plus" />
+            <font-awesome-icon
+              class="w-8 h-8 dark:text-white"
+              icon="fa-solid fa-cart-plus"
+            />
           </figure>
         </div>
       </div>
@@ -143,11 +170,14 @@
         />
         <div class="product-info">
           <div>
-            <p>$120,00</p>
-            <p class="text-gray-400">Motorbike</p>
+            <p class="dark:text-white">$120,00</p>
+            <p class="text-gray-400 dark:text-gray-300">Motorbike</p>
           </div>
           <figure>
-            <font-awesome-icon class="w-8 h-8" icon="fa-solid fa-cart-plus" />
+            <font-awesome-icon
+              class="w-8 h-8 dark:text-white"
+              icon="fa-solid fa-cart-plus"
+            />
           </figure>
         </div>
       </div>
@@ -158,11 +188,14 @@
         />
         <div class="product-info">
           <div>
-            <p>$120,00</p>
-            <p class="text-gray-400">Motorbike</p>
+            <p class="dark:text-white">$120,00</p>
+            <p class="text-gray-400 dark:text-gray-300">Motorbike</p>
           </div>
           <figure>
-            <font-awesome-icon class="w-8 h-8" icon="fa-solid fa-cart-plus" />
+            <font-awesome-icon
+              class="w-8 h-8 dark:text-white"
+              icon="fa-solid fa-cart-plus"
+            />
           </figure>
         </div>
       </div>
@@ -173,11 +206,14 @@
         />
         <div class="product-info">
           <div>
-            <p>$120,00</p>
-            <p class="text-gray-400">Motorbike</p>
+            <p class="dark:text-white">$120,00</p>
+            <p class="text-gray-400 dark:text-gray-300">Motorbike</p>
           </div>
           <figure>
-            <font-awesome-icon class="w-8 h-8" icon="fa-solid fa-cart-plus" />
+            <font-awesome-icon
+              class="w-8 h-8 dark:text-white"
+              icon="fa-solid fa-cart-plus"
+            />
           </figure>
         </div>
       </div>
@@ -188,11 +224,14 @@
         />
         <div class="product-info">
           <div>
-            <p>$120,00</p>
-            <p class="text-gray-400">Motorbike</p>
+            <p class="dark:text-white">$120,00</p>
+            <p class="text-gray-400 dark:text-gray-300">Motorbike</p>
           </div>
           <figure>
-            <font-awesome-icon class="w-8 h-8" icon="fa-solid fa-cart-plus" />
+            <font-awesome-icon
+              class="w-8 h-8 dark:text-white"
+              icon="fa-solid fa-cart-plus"
+            />
           </figure>
         </div>
       </div>
@@ -203,11 +242,14 @@
         />
         <div class="product-info">
           <div>
-            <p>$120,00</p>
-            <p class="text-gray-400">Motorbike</p>
+            <p class="dark:text-white">$120,00</p>
+            <p class="text-gray-400 dark:text-gray-300">Motorbike</p>
           </div>
           <figure>
-            <font-awesome-icon class="w-8 h-8" icon="fa-solid fa-cart-plus" />
+            <font-awesome-icon
+              class="w-8 h-8 dark:text-white"
+              icon="fa-solid fa-cart-plus"
+            />
           </figure>
         </div>
       </div>
@@ -218,11 +260,14 @@
         />
         <div class="product-info">
           <div>
-            <p>$120,00</p>
-            <p class="text-gray-400">Motorbike</p>
+            <p class="dark:text-white">$120,00</p>
+            <p class="text-gray-400 dark:text-gray-300">Motorbike</p>
           </div>
           <figure>
-            <font-awesome-icon class="w-8 h-8" icon="fa-solid fa-cart-plus" />
+            <font-awesome-icon
+              class="w-8 h-8 dark:text-white"
+              icon="fa-solid fa-cart-plus"
+            />
           </figure>
         </div>
       </div>
