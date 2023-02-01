@@ -1,219 +1,232 @@
 <template>
-  <main class="h-screen">
-    <section class="main-container">
-      <div class="cards-container">
-        <div class="product-card">
-          <img
-            src="https://images.pexels.com/photos/34006/pexels-photo.jpg"
-            alt=""
-          />
-          <div class="product-info">
-            <div>
-              <p>$120,00</p>
-              <p class="text-gray-400">Bike</p>
-            </div>
-            <figure>
-              <font-awesome-icon class="w-8 h-8" icon="fa-solid fa-cart-plus" />
-            </figure>
+  <main class="container mx-auto main-container">
+    <div class="cards-container">
+      <div class="product-card">
+        <img
+          src="https://images.pexels.com/photos/34006/pexels-photo.jpg"
+          alt=""
+        />
+        <div class="product-info">
+          <div>
+            <p>$120,00</p>
+            <p class="text-gray-400">Motorbike</p>
           </div>
-        </div>
-        <div class="product-card">
-          <img
-            src="https://images.pexels.com/photos/34006/pexels-photo.jpg"
-            alt=""
-          />
-          <div class="product-info">
-            <div>
-              <p>$120,00</p>
-              <p class="text-gray-400">Bike</p>
-            </div>
-            <figure>
-              <font-awesome-icon class="w-8 h-8" icon="fa-solid fa-cart-plus" />
-            </figure>
-          </div>
-        </div>
-        <div class="product-card">
-          <img
-            src="https://images.pexels.com/photos/34006/pexels-photo.jpg"
-            alt=""
-          />
-          <div class="product-info">
-            <div>
-              <p>$120,00</p>
-              <p class="text-gray-400">Bike</p>
-            </div>
-            <figure>
-              <font-awesome-icon class="w-8 h-8" icon="fa-solid fa-cart-plus" />
-            </figure>
-          </div>
-        </div>
-        <div class="product-card">
-          <img
-            src="https://images.pexels.com/photos/34006/pexels-photo.jpg"
-            alt=""
-          />
-          <div class="product-info">
-            <div>
-              <p>$120,00</p>
-              <p class="text-gray-400">Bike</p>
-            </div>
-            <figure>
-              <font-awesome-icon class="w-8 h-8" icon="fa-solid fa-cart-plus" />
-            </figure>
-          </div>
-        </div>
-        <div class="product-card">
-          <img
-            src="https://images.pexels.com/photos/34006/pexels-photo.jpg"
-            alt=""
-          />
-          <div class="product-info">
-            <div>
-              <p>$120,00</p>
-              <p class="text-gray-400">Bike</p>
-            </div>
-            <figure>
-              <font-awesome-icon class="w-8 h-8" icon="fa-solid fa-cart-plus" />
-            </figure>
-          </div>
-        </div>
-        <div class="product-card">
-          <img
-            src="https://images.pexels.com/photos/34006/pexels-photo.jpg"
-            alt=""
-          />
-          <div class="product-info">
-            <div>
-              <p>$120,00</p>
-              <p class="text-gray-400">Bike</p>
-            </div>
-            <figure>
-              <font-awesome-icon class="w-8 h-8" icon="fa-solid fa-cart-plus" />
-            </figure>
-          </div>
-        </div>
-        <div class="product-card">
-          <img
-            src="https://images.pexels.com/photos/34006/pexels-photo.jpg"
-            alt=""
-          />
-          <div class="product-info">
-            <div>
-              <p>$120,00</p>
-              <p class="text-gray-400">Bike</p>
-            </div>
-            <figure>
-              <font-awesome-icon class="w-8 h-8" icon="fa-solid fa-cart-plus" />
-            </figure>
-          </div>
-        </div>
-        <div class="product-card">
-          <img
-            src="https://images.pexels.com/photos/34006/pexels-photo.jpg"
-            alt=""
-          />
-          <div class="product-info">
-            <div>
-              <p>$120,00</p>
-              <p class="text-gray-400">Bike</p>
-            </div>
-            <figure>
-              <font-awesome-icon class="w-8 h-8" icon="fa-solid fa-cart-plus" />
-            </figure>
-          </div>
-        </div>
-        <div class="product-card">
-          <img
-            src="https://images.pexels.com/photos/34006/pexels-photo.jpg"
-            alt=""
-          />
-          <div class="product-info">
-            <div>
-              <p>$120,00</p>
-              <p class="text-gray-400">Bike</p>
-            </div>
-            <figure>
-              <font-awesome-icon class="w-8 h-8" icon="fa-solid fa-cart-plus" />
-            </figure>
-          </div>
-        </div>
-        <div class="product-card">
-          <img
-            src="https://images.pexels.com/photos/34006/pexels-photo.jpg"
-            alt=""
-          />
-          <div class="product-info">
-            <div>
-              <p>$120,00</p>
-              <p class="text-gray-400">Bike</p>
-            </div>
-            <figure>
-              <font-awesome-icon class="w-8 h-8" icon="fa-solid fa-cart-plus" />
-            </figure>
-          </div>
-        </div>
-        <div class="product-card">
-          <img
-            src="https://images.pexels.com/photos/34006/pexels-photo.jpg"
-            alt=""
-          />
-          <div class="product-info">
-            <div>
-              <p>$120,00</p>
-              <p class="text-gray-400">Bike</p>
-            </div>
-            <figure>
-              <font-awesome-icon class="w-8 h-8" icon="fa-solid fa-cart-plus" />
-            </figure>
-          </div>
-        </div>
-        <div class="product-card">
-          <img
-            src="https://images.pexels.com/photos/34006/pexels-photo.jpg"
-            alt=""
-          />
-          <div class="product-info">
-            <div>
-              <p>$120,00</p>
-              <p class="text-gray-400">Bike</p>
-            </div>
-            <figure>
-              <font-awesome-icon class="w-8 h-8" icon="fa-solid fa-cart-plus" />
-            </figure>
-          </div>
-        </div>
-        <div class="product-card">
-          <img
-            src="https://images.pexels.com/photos/34006/pexels-photo.jpg"
-            alt=""
-          />
-          <div class="product-info">
-            <div>
-              <p>$120,00</p>
-              <p class="text-gray-400">Bike</p>
-            </div>
-            <figure>
-              <font-awesome-icon class="w-8 h-8" icon="fa-solid fa-cart-plus" />
-            </figure>
-          </div>
-        </div>
-        <div class="product-card">
-          <img
-            src="https://images.pexels.com/photos/34006/pexels-photo.jpg"
-            alt=""
-          />
-          <div class="product-info">
-            <div>
-              <p>$120,00</p>
-              <p class="text-gray-400">Bike</p>
-            </div>
-            <figure>
-              <font-awesome-icon class="w-8 h-8" icon="fa-solid fa-cart-plus" />
-            </figure>
-          </div>
+          <figure>
+            <font-awesome-icon class="w-8 h-8" icon="fa-solid fa-cart-plus" />
+          </figure>
         </div>
       </div>
-    </section>
+      <div class="product-card">
+        <img
+          src="https://images.pexels.com/photos/34006/pexels-photo.jpg"
+          alt=""
+        />
+        <div class="product-info">
+          <div>
+            <p>$120,00</p>
+            <p class="text-gray-400">Motorbike</p>
+          </div>
+          <figure>
+            <font-awesome-icon class="w-8 h-8" icon="fa-solid fa-cart-plus" />
+          </figure>
+        </div>
+      </div>
+      <div class="product-card">
+        <img
+          src="https://images.pexels.com/photos/34006/pexels-photo.jpg"
+          alt=""
+        />
+        <div class="product-info">
+          <div>
+            <p>$120,00</p>
+            <p class="text-gray-400">Motorbike</p>
+          </div>
+          <figure>
+            <font-awesome-icon class="w-8 h-8" icon="fa-solid fa-cart-plus" />
+          </figure>
+        </div>
+      </div>
+      <div class="product-card">
+        <img
+          src="https://images.pexels.com/photos/34006/pexels-photo.jpg"
+          alt=""
+        />
+        <div class="product-info">
+          <div>
+            <p>$120,00</p>
+            <p class="text-gray-400">Motorbike</p>
+          </div>
+          <figure>
+            <font-awesome-icon class="w-8 h-8" icon="fa-solid fa-cart-plus" />
+          </figure>
+        </div>
+      </div>
+      <div class="product-card">
+        <img
+          src="https://images.pexels.com/photos/34006/pexels-photo.jpg"
+          alt=""
+        />
+        <div class="product-info">
+          <div>
+            <p>$120,00</p>
+            <p class="text-gray-400">Motorbike</p>
+          </div>
+          <figure>
+            <font-awesome-icon class="w-8 h-8" icon="fa-solid fa-cart-plus" />
+          </figure>
+        </div>
+      </div>
+      <div class="product-card">
+        <img
+          src="https://images.pexels.com/photos/34006/pexels-photo.jpg"
+          alt=""
+        />
+        <div class="product-info">
+          <div>
+            <p>$120,00</p>
+            <p class="text-gray-400">Motorbike</p>
+          </div>
+          <figure>
+            <font-awesome-icon class="w-8 h-8" icon="fa-solid fa-cart-plus" />
+          </figure>
+        </div>
+      </div>
+      <div class="product-card">
+        <img
+          src="https://images.pexels.com/photos/34006/pexels-photo.jpg"
+          alt=""
+        />
+        <div class="product-info">
+          <div>
+            <p>$120,00</p>
+            <p class="text-gray-400">Motorbike</p>
+          </div>
+          <figure>
+            <font-awesome-icon class="w-8 h-8" icon="fa-solid fa-cart-plus" />
+          </figure>
+        </div>
+      </div>
+      <div class="product-card">
+        <img
+          src="https://images.pexels.com/photos/34006/pexels-photo.jpg"
+          alt=""
+        />
+        <div class="product-info">
+          <div>
+            <p>$120,00</p>
+            <p class="text-gray-400">Motorbike</p>
+          </div>
+          <figure>
+            <font-awesome-icon class="w-8 h-8" icon="fa-solid fa-cart-plus" />
+          </figure>
+        </div>
+      </div>
+      <div class="product-card">
+        <img
+          src="https://images.pexels.com/photos/34006/pexels-photo.jpg"
+          alt=""
+        />
+        <div class="product-info">
+          <div>
+            <p>$120,00</p>
+            <p class="text-gray-400">Motorbike</p>
+          </div>
+          <figure>
+            <font-awesome-icon class="w-8 h-8" icon="fa-solid fa-cart-plus" />
+          </figure>
+        </div>
+      </div>
+      <div class="product-card">
+        <img
+          src="https://images.pexels.com/photos/34006/pexels-photo.jpg"
+          alt=""
+        />
+        <div class="product-info">
+          <div>
+            <p>$120,00</p>
+            <p class="text-gray-400">Motorbike</p>
+          </div>
+          <figure>
+            <font-awesome-icon class="w-8 h-8" icon="fa-solid fa-cart-plus" />
+          </figure>
+        </div>
+      </div>
+      <div class="product-card">
+        <img
+          src="https://images.pexels.com/photos/34006/pexels-photo.jpg"
+          alt=""
+        />
+        <div class="product-info">
+          <div>
+            <p>$120,00</p>
+            <p class="text-gray-400">Motorbike</p>
+          </div>
+          <figure>
+            <font-awesome-icon class="w-8 h-8" icon="fa-solid fa-cart-plus" />
+          </figure>
+        </div>
+      </div>
+      <div class="product-card">
+        <img
+          src="https://images.pexels.com/photos/34006/pexels-photo.jpg"
+          alt=""
+        />
+        <div class="product-info">
+          <div>
+            <p>$120,00</p>
+            <p class="text-gray-400">Motorbike</p>
+          </div>
+          <figure>
+            <font-awesome-icon class="w-8 h-8" icon="fa-solid fa-cart-plus" />
+          </figure>
+        </div>
+      </div>
+      <div class="product-card">
+        <img
+          src="https://images.pexels.com/photos/34006/pexels-photo.jpg"
+          alt=""
+        />
+        <div class="product-info">
+          <div>
+            <p>$120,00</p>
+            <p class="text-gray-400">Motorbike</p>
+          </div>
+          <figure>
+            <font-awesome-icon class="w-8 h-8" icon="fa-solid fa-cart-plus" />
+          </figure>
+        </div>
+      </div>
+      <div class="product-card">
+        <img
+          src="https://images.pexels.com/photos/34006/pexels-photo.jpg"
+          alt=""
+        />
+        <div class="product-info">
+          <div>
+            <p>$120,00</p>
+            <p class="text-gray-400">Motorbike</p>
+          </div>
+          <figure>
+            <font-awesome-icon class="w-8 h-8" icon="fa-solid fa-cart-plus" />
+          </figure>
+        </div>
+      </div>
+      <div class="product-card">
+        <img
+          src="https://images.pexels.com/photos/34006/pexels-photo.jpg"
+          alt=""
+        />
+        <div class="product-info">
+          <div>
+            <p>$120,00</p>
+            <p class="text-gray-400">Motorbike</p>
+          </div>
+          <figure>
+            <font-awesome-icon class="w-8 h-8" icon="fa-solid fa-cart-plus" />
+          </figure>
+        </div>
+      </div>
+    </div>
   </main>
 </template>
 
@@ -228,10 +241,8 @@
   --md: 16px;
   --lg: 18px;
 }
-.main-container {
-  margin: 20px;
-}
 .cards-container {
+  margin: 20px 0;
   display: grid;
   grid-template-columns: repeat(auto-fill, 240px);
   gap: 26px;
