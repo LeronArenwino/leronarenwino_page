@@ -22,13 +22,14 @@ import {
   faVuejs,
   faBootstrap,
 } from "@fortawesome/free-brands-svg-icons";
-import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
+import { faMoon, faSun, faCartPlus } from "@fortawesome/free-solid-svg-icons";
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 
 /* add icons to the library */
 library.add(
   faMoon,
   faSun,
+  faCartPlus,
   faLinkedin,
   faGithub,
   faTwitter,
