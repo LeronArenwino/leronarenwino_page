@@ -1,5 +1,5 @@
 <template>
-  <main class="h-screen">
+  <main class="container mx-auto h-screen">
     <section class="login">
       <div class="form-container">
         <h1 class="title dark:text-white">My account</h1>

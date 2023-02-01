@@ -1,5 +1,5 @@
 <template>
-  <main class="h-screen">
+  <main class="container mx-auto h-screen">
     <section class="login">
       <div class="form-container">
         <img src="../../assets/logo_yard_sale.svg" alt="logo" class="logo" />
