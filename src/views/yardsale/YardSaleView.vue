@@ -1,3 +1,9 @@
+<script setup>
+import { RouterView } from "vue-router";
+import YardSaleMenuComponent from "@/components/YardSaleMenuComponent.vue";
+</script>
+
 <template>
-  <router-view></router-view>
+  <YardSaleMenuComponent></YardSaleMenuComponent>
+  <RouterView />
 </template>
