@@ -7,18 +7,20 @@
         class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl"
       >
         <router-link to="/">
-          <font-awesome-icon class="dark:text-white" icon="fa-solid fa-house"
+          <font-awesome-icon
+            class="dark:text-whit w-3 h-3"
+            icon="fa-solid fa-house"
         /></router-link>
         <div class="flex items-center lg:order-2">
           <button
             data-collapse-toggle="navbar-default"
             type="button"
-            class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            class="inline-flex items-center text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
             aria-controls="navbar-default"
             aria-expanded="false"
           >
             <svg
-              class="w-6 h-6"
+              class="w-4 h-4"
               fill="currentColor"
               viewBox="0 0 20 20"
               xmlns="http://www.w3.org/2000/svg"
@@ -30,7 +32,7 @@
               ></path>
             </svg>
             <svg
-              class="hidden w-6 h-6"
+              class="hidden w-4 h-4"
               fill="currentColor"
               viewBox="0 0 20 20"
               xmlns="http://www.w3.org/2000/svg"
