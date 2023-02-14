@@ -1,7 +1,7 @@
 <template>
   <header class="sticky top-0 z-50">
     <nav
-      class="bg-emerald-200 border-gray-900 px-4 lg:px-6 py-2.5 dark:bg-gray-800"
+      class="bg-emerald-200 border-gray-400 px-4 lg:px-6 py-2.5 dark:bg-gray-800"
     >
       <img src="../assets/icon_menu.svg" alt="menu" class="menu" />
       <div class="navbar-left">
@@ -36,7 +36,10 @@
       </div>
       <div class="navbar-right">
         <ul>
-          <li class="text-gray-500 dark:text-green-400 navbar-email">
+          <li
+            @click="toggleDesktopMenu"
+            class="text-gray-500 dark:text-green-400 navbar-email"
+          >
             leronarenwino@example.com
           </li>
           <li class="navbar-shopping-cart">
@@ -48,22 +51,40 @@
           </li>
         </ul>
       </div>
+      <div
+        id="desktop-menu"
+        class="text-dark dark:text-white bg-emerald-200 dark:bg-gray-800 border border-gray-500 desktop-menu"
+      >
+        <ul>
+          <li>
+            <a href="/">My orders</a>
+          </li>
+          <li>
+            <a href="/">My account </a>
+          </li>
+          <li class="border-t border-black">
+            <a href="/" class="text-green-500 dark:text-green-400">Sign out</a>
+          </li>
+        </ul>
+      </div>
     </nav>
-    <div class="hidden border border-black desktop-menu">
-      <ul>
-        <li>
-          <a href="/">My orders</a>
-        </li>
-        <li>
-          <a href="/">My account </a>
-        </li>
-        <li class="border-t border-black">
-          <a href="/" class="text-green-300">Sign out</a>
-        </li>
-      </ul>
-    </div>
   </header>
 </template>
+
+<script>
+export default {
+  data() {
+    return {};
+  },
+  methods: {
+    toggleDesktopMenu() {
+      const desktopMenu = document.getElementById("desktop-menu");
+      desktopMenu.classList.toggle("inactive");
+    },
+  },
+};
+</script>
+
 <style scoped>
 :root {
   --white: #ffffff;
@@ -75,7 +96,14 @@
   --md: 16px;
   --lg: 18px;
 }
+
+.inactive {
+  display: none;
+}
 .desktop-menu {
+  position: absolute;
+  top: 44px;
+  right: 32px;
   width: 140px;
   height: auto;
   border-radius: 6px;
@@ -131,6 +159,7 @@ nav {
   justify-content: space-between;
 }
 .navbar-email {
+  cursor: pointer;
   margin-right: 12px;
 }
 .navbar-shopping-cart div {
