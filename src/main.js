@@ -29,6 +29,8 @@ import {
   faHouse,
   faCartShopping,
   faBars,
+  faCaretLeft,
+  faXmark,
 } from "@fortawesome/free-solid-svg-icons";
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 
@@ -40,6 +42,8 @@ library.add(
   faHouse,
   faCartShopping,
   faBars,
+  faCaretLeft,
+  faXmark,
   faLinkedin,
   faGithub,
   faTwitter,
