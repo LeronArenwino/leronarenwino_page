@@ -46,7 +46,7 @@
           >
             leronarenwino@example.com
           </li>
-          <li class="navbar-shopping-cart">
+          <li @click="toggleProductDetail" class="navbar-shopping-cart">
             <font-awesome-icon
               class="dark:text-white"
               icon="fa-solid fa-cart-shopping"
@@ -73,11 +73,11 @@
       </div>
       <div
         id="mobile-menu"
-        class="w-full text-dark dark:text-white bg-emerald-200 dark:bg-gray-800 p-4 mobile-menu inactive"
+        class="w-full h-screen text-dark dark:text-white bg-emerald-200 dark:bg-gray-800 p-4 mobile-menu inactive"
       >
         <ul>
           <li>
-            <a href="/">CATEGORIES</a>
+            <a class="font-bold" href="/">CATEGORIES</a>
           </li>
           <li>
             <a href="/">All</a>
@@ -98,16 +98,16 @@
             <a href="/">Others</a>
           </li>
         </ul>
-        <ul>
-          <li>
+        <ul class="border-t border-dark mt-2">
+          <li class="mt-2">
             <a href="/">My orders</a>
           </li>
           <li>
             <a href="/">My account</a>
           </li>
         </ul>
-        <ul>
-          <li>
+        <ul class="border-t border-dark mt-2">
+          <li class="mt-2">
             <a href="/" class="email">leronarenwino@example.com</a>
           </li>
           <li>
@@ -118,7 +118,7 @@
         </ul>
       </div>
     </nav>
-    <aside class="bg-emerald-400 product-detail">
+    <aside id="product-detail" class="bg-emerald-400 product-detail inactive">
       <div class="title-container">
         <font-awesome-icon icon="fa-solid fa-caret-left" />
         <p class="title">My order</p>
@@ -150,12 +150,46 @@ export default {
   },
   methods: {
     toggleDesktopMenu() {
+      const productDetail = document.getElementById("product-detail");
+      const isProductDetailClosed =
+        productDetail.classList.contains("inactive");
+
       const desktopMenu = document.getElementById("desktop-menu");
+      if (!isProductDetailClosed) {
+        productDetail.classList.add("inactive");
+      }
+
       desktopMenu.classList.toggle("inactive");
     },
     toggleMobileMenu() {
+      const productDetail = document.getElementById("product-detail");
+      const isProductDetailClosed =
+        productDetail.classList.contains("inactive");
+
       const mobileMenu = document.getElementById("mobile-menu");
+      if (!isProductDetailClosed) {
+        productDetail.classList.add("inactive");
+      }
+
       mobileMenu.classList.toggle("inactive");
+    },
+    toggleProductDetail() {
+      const mobileMenu = document.getElementById("mobile-menu");
+      const isMobileMenuClosed = mobileMenu.classList.contains("inactive");
+
+      const desktopMenu = document.getElementById("desktop-menu");
+      const isDesktopMenuClosed = desktopMenu.classList.contains("inactive");
+
+      const productDetail = document.getElementById("product-detail");
+
+      if (!isMobileMenuClosed) {
+        mobileMenu.classList.add("inactive");
+      }
+      if (!isDesktopMenuClosed) {
+        desktopMenu.classList.add("inactive");
+      }
+
+      productDetail.classList.toggle("inactive");
     },
   },
 };
@@ -255,7 +289,9 @@ nav {
   cursor: pointer;
   margin-right: 12px;
 }
-
+.navbar-shopping-cart {
+  cursor: pointer;
+}
 .navbar-shopping-cart div {
   width: 16px;
   height: 16px;
@@ -286,14 +322,6 @@ nav {
   font-weight: 300;
 }
 
-.mobile-menu ul:nth-child(2) {
-  margin-top: 60px;
-}
-
-.mobile-menu ul:nth-child(3) {
-  margin-top: 100px;
-}
-
 .product-detail {
   width: 360px;
   padding: 24px;
@@ -303,6 +331,8 @@ nav {
 }
 .title-container {
   display: flex;
+  align-items: center;
+  margin-bottom: 8px;
 }
 .title-container img {
   transform: rotate(180deg);
@@ -317,7 +347,6 @@ nav {
   grid-template-columns: auto 1fr;
   gap: 16px;
   align-items: center;
-  background-color: var(--text-input-field);
   margin-bottom: 24px;
   border-radius: 8px;
   padding: 0 24px;
