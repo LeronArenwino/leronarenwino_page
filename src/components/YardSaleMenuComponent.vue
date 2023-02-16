@@ -144,36 +144,38 @@
         </button>
       </div>
     </aside>
-    <aside id="productDetail" class="bg-emerald-400 product-detail inactive">
-      <div
-        @click="closeProductDetailAside"
-        id="productDetailCloseIcon"
-        class="product-detail-close"
+    <template v-if="productData != null">
+      <aside
+        id="productDetail"
+        class="bg-emerald-400 product-detail"
+        :class="isInactiveProductDetail"
       >
-        <font-awesome-icon class="dark:text-white" icon="fa-solid fa-xmark" />
-      </div>
-      <img
-        src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-        alt="bike"
-      />
-      <div class="product-info">
-        <p>$35,00</p>
-        <p>Bike</p>
-        <p>
-          With its practical position, this bike also fulfills a decorative
-          function, add your hall or workspace.
-        </p>
-        <button
-          class="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700 primary-button add-to-cart-button"
+        <div
+          @click="closeProductDetailAside"
+          id="productDetailCloseIcon"
+          class="product-detail-close"
         >
-          <font-awesome-icon
-            class="w-4 h-4 dark:text-white"
-            icon="fa-solid fa-cart-plus"
-          />
-          Add to cart
-        </button>
-      </div>
-    </aside>
+          <font-awesome-icon class="dark:text-white" icon="fa-solid fa-xmark" />
+        </div>
+        <img :src="productData.images[0]" alt="bike" />
+        <div class="product-info">
+          <p>${{ productData.price }}</p>
+          <p>{{ productData.title }}</p>
+          <p>
+            {{ productData.description }}
+          </p>
+          <button
+            class="mb-8 text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700 primary-button add-to-cart-button"
+          >
+            <font-awesome-icon
+              class="w-4 h-4 mr-2 dark:text-white"
+              icon="fa-solid fa-cart-plus"
+            />
+            Add to cart
+          </button>
+        </div>
+      </aside>
+    </template>
   </header>
 </template>
 
@@ -182,29 +184,30 @@ export default {
   data() {
     return {};
   },
+  emits: ["close-product-detail"],
+  props: {
+    productData: Object || null,
+    isInactiveProductDetail: String,
+  },
   methods: {
     toggleDesktopMenu() {
-      const shoppingCartContainer = document.getElementById(
-        "shoppingCartContainer"
-      );
+      const shoppingCartCont = document.getElementById("shoppingCartContainer");
       const isProductDetailClosed =
-        shoppingCartContainer.classList.contains("inactive");
+        shoppingCartCont.classList.contains("inactive");
 
       if (!isProductDetailClosed) {
-        shoppingCartContainer.classList.add("inactive");
+        shoppingCartCont.classList.add("inactive");
       }
       const desktopMenu = document.getElementById("desktop-menu");
       desktopMenu.classList.toggle("inactive");
     },
     toggleMobileMenu() {
-      const shoppingCartContainer = document.getElementById(
-        "shoppingCartContainer"
-      );
+      const shoppingCartCont = document.getElementById("shoppingCartContainer");
       const isProductDetailClosed =
-        shoppingCartContainer.classList.contains("inactive");
+        shoppingCartCont.classList.contains("inactive");
 
       if (!isProductDetailClosed) {
-        shoppingCartContainer.classList.add("inactive");
+        shoppingCartCont.classList.add("inactive");
       }
 
       const mobileMenu = document.getElementById("mobile-menu");
@@ -222,14 +225,14 @@ export default {
       if (!isDesktopMenuClosed) {
         desktopMenu.classList.add("inactive");
       }
-      const shoppingCartContainer = document.getElementById(
-        "shoppingCartContainer"
-      );
-      shoppingCartContainer.classList.toggle("inactive");
+      const shoppingCartCont = document.getElementById("shoppingCartContainer");
+      shoppingCartCont.classList.toggle("inactive");
     },
     closeProductDetailAside() {
       const productDetail = document.getElementById("productDetail");
       productDetail.classList.add("inactive");
+
+      this.$emit("close-product-detail");
     },
   },
 };

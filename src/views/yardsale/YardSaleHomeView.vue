@@ -7,13 +7,19 @@ const store = useDataStore();
 <template>
   <main class="container mx-auto main-container">
     <div class="cards-container">
-      <div v-for="item in store.products" :key="item.id">
+      <div v-for="product in store.products" :key="product.id">
         <div class="product-card">
-          <img :src="item.images[0]" alt="Image product" />
+          <img
+            @click="getProductData(product)"
+            :src="product.images[0]"
+            alt="Image product"
+          />
           <div class="product-info">
             <div>
-              <p class="dark:text-white">${{ item.price }}</p>
-              <p class="text-gray-400 dark:text-gray-300">{{ item.title }}</p>
+              <p class="dark:text-white">${{ product.price }}</p>
+              <p class="text-gray-400 dark:text-gray-300">
+                {{ product.title }}
+              </p>
             </div>
             <figure>
               <font-awesome-icon
@@ -30,8 +36,14 @@ const store = useDataStore();
 
 <script>
 export default {
+  emits: { "get-product-data": null },
   data() {
     return {};
+  },
+  methods: {
+    getProductData(data) {
+      this.$emit("get-product-data", { data });
+    },
   },
 };
 </script>
@@ -62,6 +74,7 @@ export default {
   height: 240px;
   border-radius: 20px;
   object-fit: cover;
+  cursor: pointer;
 }
 .product-card .product-info {
   display: flex;
