@@ -73,7 +73,7 @@
       </div>
       <div
         id="mobile-menu"
-        class="w-full h-screen text-dark dark:text-white bg-emerald-200 dark:bg-gray-800 p-4 mobile-menu inactive"
+        class="w-full text-dark dark:text-white bg-emerald-200 dark:bg-gray-800 p-4 mobile-menu inactive"
       >
         <ul>
           <li>
@@ -98,15 +98,15 @@
             <a href="/">Others</a>
           </li>
         </ul>
-        <ul class="border-t border-dark mt-2">
-          <li class="mt-2">
+        <ul class="border-t border-black dark:border-white mt-2">
+          <li class="mt-8">
             <a href="/">My orders</a>
           </li>
           <li>
             <a href="/">My account</a>
           </li>
         </ul>
-        <ul class="border-t border-dark mt-2">
+        <ul class="mt-2">
           <li class="mt-2">
             <a href="/" class="email">leronarenwino@example.com</a>
           </li>
@@ -118,7 +118,7 @@
         </ul>
       </div>
     </nav>
-    <aside id="product-detail" class="bg-emerald-400 product-detail inactive">
+    <aside id="shoppingCartContainer" class="bg-emerald-400 inactive">
       <div class="title-container">
         <font-awesome-icon icon="fa-solid fa-caret-left" />
         <p class="title">My order</p>
@@ -140,6 +140,30 @@
         <button class="primary-button">Checkout</button>
       </div>
     </aside>
+    <aside id="productDetail" class="bg-emerald-400 product-detail inactive">
+      <div class="product-detail-close">
+        <font-awesome-icon class="dark:text-white" icon="fa-solid fa-xmark" />
+      </div>
+      <img
+        src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+        alt="bike"
+      />
+      <div class="product-info">
+        <p>$35,00</p>
+        <p>Bike</p>
+        <p>
+          With its practical position, this bike also fulfills a decorative
+          function, add your hall or workspace.
+        </p>
+        <button class="primary-button add-to-cart-button">
+          <font-awesome-icon
+            class="w-4 h-4 dark:text-white"
+            icon="fa-solid fa-cart-plus"
+          />
+          Add to cart
+        </button>
+      </div>
+    </aside>
   </header>
 </template>
 
@@ -150,37 +174,33 @@ export default {
   },
   methods: {
     toggleDesktopMenu() {
-      const productDetail = document.getElementById("product-detail");
+      const productDetail = document.getElementById("shoppingCartContainer");
       const isProductDetailClosed =
         productDetail.classList.contains("inactive");
 
-      const desktopMenu = document.getElementById("desktop-menu");
       if (!isProductDetailClosed) {
         productDetail.classList.add("inactive");
       }
-
+      const desktopMenu = document.getElementById("desktop-menu");
       desktopMenu.classList.toggle("inactive");
     },
     toggleMobileMenu() {
-      const productDetail = document.getElementById("product-detail");
+      const productDetail = document.getElementById("shoppingCartContainer");
       const isProductDetailClosed =
         productDetail.classList.contains("inactive");
 
-      const mobileMenu = document.getElementById("mobile-menu");
       if (!isProductDetailClosed) {
         productDetail.classList.add("inactive");
       }
 
+      const mobileMenu = document.getElementById("mobile-menu");
       mobileMenu.classList.toggle("inactive");
     },
     toggleProductDetail() {
+      const desktopMenu = document.getElementById("desktop-menu");
       const mobileMenu = document.getElementById("mobile-menu");
       const isMobileMenuClosed = mobileMenu.classList.contains("inactive");
-
-      const desktopMenu = document.getElementById("desktop-menu");
       const isDesktopMenuClosed = desktopMenu.classList.contains("inactive");
-
-      const productDetail = document.getElementById("product-detail");
 
       if (!isMobileMenuClosed) {
         mobileMenu.classList.add("inactive");
@@ -188,7 +208,7 @@ export default {
       if (!isDesktopMenuClosed) {
         desktopMenu.classList.add("inactive");
       }
-
+      const productDetail = document.getElementById("shoppingCartContainer");
       productDetail.classList.toggle("inactive");
     },
   },
@@ -322,13 +342,18 @@ nav {
   font-weight: 300;
 }
 
-.product-detail {
+aside {
   width: 360px;
-  padding: 24px;
   box-sizing: border-box;
   position: absolute;
   right: 0;
 }
+
+/* ShoppingCart */
+#shoppingCartContainer {
+  padding: 24px;
+}
+
 .title-container {
   display: flex;
   align-items: center;
@@ -386,6 +411,48 @@ nav {
   font-size: var(--md);
   font-weight: bold;
 }
+
+.product-detail-close {
+  background: var(--white);
+  width: 14px;
+  height: 14px;
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  z-index: 2;
+  padding: 12px;
+  border-radius: 50%;
+}
+.product-detail-close:hover {
+  cursor: pointer;
+}
+#productDetail > img:nth-child(2) {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  border-radius: 0 0 20px 20px;
+}
+#productDetail .product-info {
+  margin: 24px 24px 0 24px;
+}
+#productDetail .product-info p:nth-child(1) {
+  font-weight: bold;
+  font-size: var(--md);
+  margin-top: 0;
+  margin-bottom: 4px;
+}
+#productDetail .product-info p:nth-child(2) {
+  color: var(--very-light-pink);
+  font-size: var(--md);
+  margin-top: 0;
+  margin-bottom: 36px;
+}
+#productDetail .product-info p:nth-child(3) {
+  color: var(--very-light-pink);
+  font-size: var(--sm);
+  margin-top: 0;
+  margin-bottom: 36px;
+}
 .primary-button {
   background-color: var(--hospital-green);
   border-radius: 8px;
@@ -397,8 +464,14 @@ nav {
   font-weight: bold;
   height: 50px;
 }
+.add-to-cart-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 @media (max-width: 640px) {
-  .product-detail {
+  aside {
     width: 100%;
   }
 }
