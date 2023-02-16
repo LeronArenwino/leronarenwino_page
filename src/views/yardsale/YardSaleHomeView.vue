@@ -12,8 +12,8 @@ const store = useDataStore();
           <img :src="item.images[0]" alt="Image product" />
           <div class="product-info">
             <div>
-              <p class="dark:text-white">{{ item.title }}</p>
-              <p class="text-gray-400 dark:text-gray-300">${{ item.price }}</p>
+              <p class="dark:text-white">${{ item.price }}</p>
+              <p class="text-gray-400 dark:text-gray-300">{{ item.title }}</p>
             </div>
             <figure>
               <font-awesome-icon
@@ -63,22 +63,22 @@ export default {
   border-radius: 20px;
   object-fit: cover;
 }
-.product-info {
+.product-card .product-info {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: 12px;
 }
-.product-info figure {
+.product-card .product-info figure {
   margin: 0px;
 }
-.product-info div p:nth-child(1) {
+.product-card .product-info div p:nth-child(1) {
   font-weight: bold;
   font-size: var(--md);
   margin-top: 0;
   margin-bottom: 4px;
 }
-.product-info div p:nth-child(2) {
+.product-card .product-info div p:nth-child(2) {
   font-size: var(--sd);
   margin-top: 0;
   margin-bottom: 0;
