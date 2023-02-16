@@ -16,6 +16,7 @@ export const useDataStore = defineStore("data", {
   state: () => ({
     projects: [],
     knowledges: [],
+    products: [],
   }),
   getters: {},
   actions: {
@@ -34,6 +35,11 @@ export const useDataStore = defineStore("data", {
         // doc.data() is never undefined for query doc snapshots
         this.knowledges.push({ ...doc.data(), id: doc.id });
       });
+    },
+    async getProducts(urlApi) {
+      this.products = [];
+      const response = await fetch(`${urlApi}/products?`);
+      this.products = await response.json();
     },
   },
 });
