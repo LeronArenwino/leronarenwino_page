@@ -29,49 +29,9 @@ const store = useDataStore();
 </template>
 
 <script>
-// Elements
-const desktopMenu = document.getElementById("desktop-menu");
-const mobileMenu = document.getElementById("mobile-menu");
-const productDetail = document.getElementById("product-detail");
-
 export default {
   data() {
     return {};
-  },
-  methods: {
-    toggleDesktopMenu() {
-      const isProductDetailClosed =
-        productDetail.classList.contains("inactive");
-
-      if (!isProductDetailClosed) {
-        productDetail.classList.add("inactive");
-      }
-
-      desktopMenu.classList.toggle("inactive");
-    },
-    toggleMobileMenu() {
-      const isProductDetailClosed =
-        productDetail.classList.contains("inactive");
-
-      if (!isProductDetailClosed) {
-        productDetail.classList.add("inactive");
-      }
-
-      mobileMenu.classList.toggle("inactive");
-    },
-    toggleProductDetail() {
-      const isMobileMenuClosed = mobileMenu.classList.contains("inactive");
-      const isDesktopMenuClosed = desktopMenu.classList.contains("inactive");
-
-      if (!isMobileMenuClosed) {
-        mobileMenu.classList.add("inactive");
-      }
-      if (!isDesktopMenuClosed) {
-        desktopMenu.classList.add("inactive");
-      }
-
-      productDetail.classList.toggle("inactive");
-    },
   },
 };
 </script>
