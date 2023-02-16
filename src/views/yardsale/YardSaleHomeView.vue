@@ -1,7 +1,13 @@
+<script setup>
+import { useDataStore } from "@/stores/index.js";
+
+const store = useDataStore();
+</script>
+
 <template>
   <main class="container mx-auto main-container">
     <div class="cards-container">
-      <div v-for="item in products" :key="item.id">
+      <div v-for="item in store.products" :key="item.id">
         <div class="product-card">
           <img :src="item.images[0]" alt="Image product" />
           <div class="product-info">
@@ -23,9 +29,6 @@
 </template>
 
 <script>
-// API URL
-const API = "https://api.escuelajs.co/api/v1";
-
 // Elements
 const desktopMenu = document.getElementById("desktop-menu");
 const mobileMenu = document.getElementById("mobile-menu");
@@ -33,9 +36,7 @@ const productDetail = document.getElementById("product-detail");
 
 export default {
   data() {
-    return {
-      products: [],
-    };
+    return {};
   },
   methods: {
     toggleDesktopMenu() {
@@ -71,18 +72,6 @@ export default {
 
       productDetail.classList.toggle("inactive");
     },
-    async fetchData(urlApi) {
-      const response = await fetch(urlApi);
-      const data = await response.json();
-      return data;
-    },
-    async getProducts(urlApi) {
-      this.products = [];
-      this.products = await this.fetchData(`${urlApi}/products?`);
-    },
-  },
-  mounted() {
-    this.getProducts(API);
   },
 };
 </script>
