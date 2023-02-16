@@ -137,11 +137,19 @@
           <font-awesome-icon icon="fa-solid fa-xmark" />
         </div>
 
-        <button class="primary-button">Checkout</button>
+        <button
+          class="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700 primary-button"
+        >
+          Checkout
+        </button>
       </div>
     </aside>
     <aside id="productDetail" class="bg-emerald-400 product-detail inactive">
-      <div class="product-detail-close">
+      <div
+        @click="closeProductDetailAside"
+        id="productDetailCloseIcon"
+        class="product-detail-close"
+      >
         <font-awesome-icon class="dark:text-white" icon="fa-solid fa-xmark" />
       </div>
       <img
@@ -155,7 +163,9 @@
           With its practical position, this bike also fulfills a decorative
           function, add your hall or workspace.
         </p>
-        <button class="primary-button add-to-cart-button">
+        <button
+          class="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700 primary-button add-to-cart-button"
+        >
           <font-awesome-icon
             class="w-4 h-4 dark:text-white"
             icon="fa-solid fa-cart-plus"
@@ -174,23 +184,27 @@ export default {
   },
   methods: {
     toggleDesktopMenu() {
-      const productDetail = document.getElementById("shoppingCartContainer");
+      const shoppingCartContainer = document.getElementById(
+        "shoppingCartContainer"
+      );
       const isProductDetailClosed =
-        productDetail.classList.contains("inactive");
+        shoppingCartContainer.classList.contains("inactive");
 
       if (!isProductDetailClosed) {
-        productDetail.classList.add("inactive");
+        shoppingCartContainer.classList.add("inactive");
       }
       const desktopMenu = document.getElementById("desktop-menu");
       desktopMenu.classList.toggle("inactive");
     },
     toggleMobileMenu() {
-      const productDetail = document.getElementById("shoppingCartContainer");
+      const shoppingCartContainer = document.getElementById(
+        "shoppingCartContainer"
+      );
       const isProductDetailClosed =
-        productDetail.classList.contains("inactive");
+        shoppingCartContainer.classList.contains("inactive");
 
       if (!isProductDetailClosed) {
-        productDetail.classList.add("inactive");
+        shoppingCartContainer.classList.add("inactive");
       }
 
       const mobileMenu = document.getElementById("mobile-menu");
@@ -208,8 +222,14 @@ export default {
       if (!isDesktopMenuClosed) {
         desktopMenu.classList.add("inactive");
       }
-      const productDetail = document.getElementById("shoppingCartContainer");
-      productDetail.classList.toggle("inactive");
+      const shoppingCartContainer = document.getElementById(
+        "shoppingCartContainer"
+      );
+      shoppingCartContainer.classList.toggle("inactive");
+    },
+    closeProductDetailAside() {
+      const productDetail = document.getElementById("productDetail");
+      productDetail.classList.add("inactive");
     },
   },
 };
@@ -442,22 +462,16 @@ aside {
   margin-bottom: 4px;
 }
 #productDetail .product-info p:nth-child(2) {
-  color: var(--very-light-pink);
   font-size: var(--md);
   margin-top: 0;
   margin-bottom: 36px;
 }
 #productDetail .product-info p:nth-child(3) {
-  color: var(--very-light-pink);
   font-size: var(--sm);
   margin-top: 0;
   margin-bottom: 36px;
 }
 .primary-button {
-  background-color: var(--hospital-green);
-  border-radius: 8px;
-  border: none;
-  color: var(--white);
   width: 100%;
   cursor: pointer;
   font-size: var(--md);
