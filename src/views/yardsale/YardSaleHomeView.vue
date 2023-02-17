@@ -42,7 +42,7 @@ export default {
   },
   methods: {
     getProductData(data) {
-      this.$emit("get-product-data", { data });
+      this.$emit("get-product-data", data);
     },
   },
 };
