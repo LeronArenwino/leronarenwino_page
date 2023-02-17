@@ -6,10 +6,16 @@ import YardSaleMenuComponent from "@/components/YardSaleMenuComponent.vue";
 <template>
   <YardSaleMenuComponent
     :product-data="productData"
-    :is-inactive-product-detail="isInactiveProductDetail"
-    @close-product-detail="closeProductDetail"
+    :desktop-menu-status="desktopMenuStatus"
+    :mobile-menu-status="mobileMenuStatus"
+    :shopping-cart-status="shoppingCartStatus"
+    :product-detail-status="productDetailStatus"
+    @toggle-desktop-menu="toggleDesktopMenu"
+    @toggle-mobile-menu="toggleMobileMenu"
+    @toggle-shopping-cart="toggleShoppingCart"
+    @close-product-detail-aside="closeProductDetail"
   ></YardSaleMenuComponent>
-  <RouterView @get-product-data="setProductData" />
+  <RouterView @get-product-data="openProdudctDetailAside" />
 </template>
 
 <script>
@@ -17,17 +23,50 @@ export default {
   data() {
     return {
       productData: null,
-      isInactiveProductDetail: "inactive",
+      desktopMenuStatus: true,
+      mobileMenuStatus: true,
+      shoppingCartStatus: true,
+      productDetailStatus: true,
     };
   },
   methods: {
-    setProductData(object) {
-      this.productData = object.data;
-      this.isInactiveProductDetail = "";
+    setProductData(dataObject) {
+      // Set product data to show
+      this.productData = dataObject;
+    },
+    openProdudctDetailAside(data) {
+      this.setProductData(data);
+      this.desktopMenuStatus = true;
+      this.mobileMenuStatus = true;
+      this.shoppingCartStatus = true;
+
+      this.productDetailStatus = false;
     },
     closeProductDetail() {
-      this.productData = null;
-      this.isInactiveProductDetail = "inactive";
+      this.setProductData(null);
+
+      this.productDetailStatus = true;
+    },
+    toggleDesktopMenu() {
+      this.mobileMenuStatus = true;
+      this.shoppingCartStatus = true;
+      this.closeProductDetail();
+
+      this.desktopMenuStatus = !this.desktopMenuStatus;
+    },
+    toggleMobileMenu() {
+      this.desktopMenuStatus = true;
+      this.shoppingCartStatus = true;
+      this.closeProductDetail();
+
+      this.mobileMenuStatus = !this.mobileMenuStatus;
+    },
+    toggleShoppingCart() {
+      this.desktopMenuStatus = true;
+      this.mobileMenuStatus = true;
+      this.closeProductDetail();
+
+      this.shoppingCartStatus = !this.shoppingCartStatus;
     },
   },
 };

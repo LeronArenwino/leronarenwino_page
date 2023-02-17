@@ -4,7 +4,7 @@
       class="bg-emerald-200 border-gray-400 px-4 lg:px-6 py-2.5 dark:bg-gray-800"
     >
       <font-awesome-icon
-        @click="toggleMobileMenu"
+        @click="$emit('toggle-mobile-menu')"
         class="dark:text-white menu"
         icon="fa-solid fa-bars"
       />
@@ -41,12 +41,15 @@
       <div class="navbar-right">
         <ul>
           <li
-            @click="toggleDesktopMenu"
+            @click="$emit('toggle-desktop-menu')"
             class="text-gray-500 dark:text-green-400 navbar-email"
           >
             leronarenwino@example.com
           </li>
-          <li @click="toggleProductDetail" class="navbar-shopping-cart">
+          <li
+            @click="$emit('toggle-shopping-cart')"
+            class="navbar-shopping-cart"
+          >
             <font-awesome-icon
               class="dark:text-white"
               icon="fa-solid fa-cart-shopping"
@@ -56,8 +59,9 @@
         </ul>
       </div>
       <div
-        id="desktop-menu"
+        ref="desktopMenu"
         class="text-dark dark:text-white bg-emerald-300 dark:bg-gray-800 desktop-menu"
+        :class="{ inactive: desktopMenuStatus }"
       >
         <ul>
           <li>
@@ -72,8 +76,8 @@
         </ul>
       </div>
       <div
-        id="mobile-menu"
-        class="w-full text-dark dark:text-white bg-emerald-200 dark:bg-gray-800 p-4 mobile-menu inactive"
+        class="w-full text-dark dark:text-white bg-emerald-200 dark:bg-gray-800 p-4 mobile-menu"
+        :class="{ inactive: mobileMenuStatus }"
       >
         <ul>
           <li>
@@ -118,7 +122,11 @@
         </ul>
       </div>
     </nav>
-    <aside id="shoppingCartContainer" class="bg-emerald-400 inactive">
+    <aside
+      id="shoppingCartContainer"
+      class="bg-emerald-400"
+      :class="{ inactive: shoppingCartStatus }"
+    >
       <div class="title-container">
         <font-awesome-icon icon="fa-solid fa-caret-left" />
         <p class="title">My order</p>
@@ -148,11 +156,10 @@
       <aside
         id="productDetail"
         class="bg-emerald-400 product-detail"
-        :class="isInactiveProductDetail"
+        :class="{ inactive: productDetailStatus }"
       >
         <div
-          @click="closeProductDetailAside"
-          id="productDetailCloseIcon"
+          @click="$emit('close-product-detail-aside')"
           class="product-detail-close"
         >
           <font-awesome-icon class="dark:text-white" icon="fa-solid fa-xmark" />
@@ -184,57 +191,20 @@ export default {
   data() {
     return {};
   },
-  emits: ["close-product-detail"],
+  emits: [
+    "toggle-desktop-menu",
+    "toggle-mobile-menu",
+    "toggle-shopping-cart",
+    "close-product-detail-aside",
+  ],
   props: {
     productData: Object || null,
-    isInactiveProductDetail: String,
+    desktopMenuStatus: Boolean,
+    mobileMenuStatus: Boolean,
+    shoppingCartStatus: Boolean,
+    productDetailStatus: Boolean,
   },
-  methods: {
-    toggleDesktopMenu() {
-      const shoppingCartCont = document.getElementById("shoppingCartContainer");
-      const isProductDetailClosed =
-        shoppingCartCont.classList.contains("inactive");
-
-      if (!isProductDetailClosed) {
-        shoppingCartCont.classList.add("inactive");
-      }
-      const desktopMenu = document.getElementById("desktop-menu");
-      desktopMenu.classList.toggle("inactive");
-    },
-    toggleMobileMenu() {
-      const shoppingCartCont = document.getElementById("shoppingCartContainer");
-      const isProductDetailClosed =
-        shoppingCartCont.classList.contains("inactive");
-
-      if (!isProductDetailClosed) {
-        shoppingCartCont.classList.add("inactive");
-      }
-
-      const mobileMenu = document.getElementById("mobile-menu");
-      mobileMenu.classList.toggle("inactive");
-    },
-    toggleProductDetail() {
-      const desktopMenu = document.getElementById("desktop-menu");
-      const mobileMenu = document.getElementById("mobile-menu");
-      const isMobileMenuClosed = mobileMenu.classList.contains("inactive");
-      const isDesktopMenuClosed = desktopMenu.classList.contains("inactive");
-
-      if (!isMobileMenuClosed) {
-        mobileMenu.classList.add("inactive");
-      }
-      if (!isDesktopMenuClosed) {
-        desktopMenu.classList.add("inactive");
-      }
-      const shoppingCartCont = document.getElementById("shoppingCartContainer");
-      shoppingCartCont.classList.toggle("inactive");
-    },
-    closeProductDetailAside() {
-      const productDetail = document.getElementById("productDetail");
-      productDetail.classList.add("inactive");
-
-      this.$emit("close-product-detail");
-    },
-  },
+  methods: {},
 };
 </script>
 
