@@ -76,21 +76,32 @@ const store = useDataStore();
                 class="flex flex-col space-y-2 justify-center sm:flex-row sm:space-y-0 sm:justify-between items-center"
               >
                 <div class="flex items-center">
-                  <button
-                    type="button"
-                    @click="redirectTo(project.link_github)"
-                    class="flex justify-center items-center text-black transition ease-in-out delay-50 bg-white hover:-translate-y-1 hover:scale-110 focus:outline-none hover:bg-emerald-100 focus:ring-4 font-medium rounded-full text-sm px-5 py-2.5 dark:bg-emerald-500 dark:text-white dark:hover:bg-emerald-400"
-                  >
-                    <font-awesome-icon
-                      icon="fa-brands fa-github"
-                      class="w-6 h-6 fill-current text-black dark:text-white mr-2"
-                      beat
-                      style="--fa-animation-duration: 2.5s"
-                    />
-                    GitHub
-                  </button>
+                  <template
+                    v-if="
+                      project.link_github != '' &&
+                      project.hasOwnProperty('link_github')
+                    "
+                    ><button
+                      type="button"
+                      @click="redirectTo(project.link_github)"
+                      class="flex justify-center items-center text-black transition ease-in-out delay-50 bg-white hover:-translate-y-1 hover:scale-110 focus:outline-none hover:bg-emerald-100 focus:ring-4 font-medium rounded-full text-sm px-5 py-2.5 dark:bg-emerald-500 dark:text-white dark:hover:bg-emerald-400"
+                    >
+                      <font-awesome-icon
+                        icon="fa-brands fa-github"
+                        class="w-6 h-6 fill-current text-black dark:text-white mr-2"
+                        beat
+                        style="--fa-animation-duration: 2.5s"
+                      />
+                      GitHub
+                    </button>
+                  </template>
                 </div>
-                <template v-if="project.link_website != ''">
+                <template
+                  v-if="
+                    project.link_website != '' &&
+                    project.hasOwnProperty('link_website')
+                  "
+                >
                   <button
                     type="button"
                     @click="redirectTo(project.link_website)"
