@@ -27,6 +27,7 @@ export const useDataStore = defineStore("data", {
         // doc.data() is never undefined for query doc snapshots
         this.projects.push({ ...doc.data(), id: doc.id });
       });
+      this.projects.sort((a, b) => b.date_published - a.date_published);
     },
     async getKnowledges() {
       this.knowledges = [];
