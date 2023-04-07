@@ -31,6 +31,7 @@ import {
   faBars,
   faCaretLeft,
   faXmark,
+  faArrowRight,
 } from "@fortawesome/free-solid-svg-icons";
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 
@@ -44,6 +45,7 @@ library.add(
   faBars,
   faCaretLeft,
   faXmark,
+  faArrowRight,
   faLinkedin,
   faGithub,
   faTwitter,
