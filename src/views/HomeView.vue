@@ -17,7 +17,7 @@ const store = useDataStore();
         >
           <span class="text-transparent bg-clip-text bg-black dark:bg-white"
             >Hello, welcome!</span
-          >
+          >😉
         </h1>
         <p
           class="mb-8 text-lg font-thin text-black lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400"
@@ -43,8 +43,8 @@ const store = useDataStore();
           >
             <span
               class="font-mono text-transparent font-medium bg-clip-text bg-black dark:bg-white"
-              >Portfolio</span
-            >
+              >Projects </span
+            >😄
           </h1>
           <p class="font-light text-black sm:text-xl dark:text-gray-400">
             Projects I have worked on!
@@ -147,8 +147,8 @@ const store = useDataStore();
           >
             <span
               class="text-transparent font-medium bg-clip-text bg-black dark:bg-white"
-              >Knowledge</span
-            >
+              >Skills</span
+            >🤓
           </h1>
           <p class="mb-5 font-light text-black sm:text-xl dark:text-gray-400">
             I know about this:
