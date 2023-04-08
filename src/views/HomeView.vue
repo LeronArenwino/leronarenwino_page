@@ -154,56 +154,48 @@ const store = useDataStore();
             I know about this:
           </p>
         </div>
-        <div
-          class="space-y-8 lg:grid lg:grid-cols-3 sm:gap-6 xl:gap-10 lg:space-y-0"
-        >
+
+        <div class="grid grid-cols-2 gap-4 place-content-center">
           <template v-for="knowledge of store.knowledges" :key="knowledge.id">
             <div
-              class="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-gradient-to-r to-white bg-emerald-200 from-emerald-300 rounded-lg shadow dark:bg-gradient-to-r dark:to-gray-800 dark:from-emerald-800 dark:text-white"
+              class="w-full max-w-md p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700"
             >
-              <h3 class="mb-4 text-2xl font-semibold">{{ knowledge.name }}</h3>
-              <p class="font-light text-black sm:text-lg dark:text-gray-400">
-                {{ knowledge.description }}
-              </p>
-              <ul role="list" class="mb-4text-center">
-                <template
-                  v-for="(img, index) of knowledge.dataImg"
-                  :key="index"
+              <div class="flex items-center justify-center mb-4">
+                <h5
+                  class="text-xl font-bold leading-none text-gray-900 dark:text-white"
                 >
-                  <li class="flex flex-row justify-center mt-2">
-                    <template v-if="img === 'not'"></template
-                    ><template v-else>
-                      <font-awesome-icon
-                        :icon="img"
-                        class="w-12 h-12 fill-current text-black dark:text-white mx-2"
-                        fade
-                        style="
-                          --fa-animation-duration: 3s;
-                          --fa-fade-opacity: 0.7;
-                        "
-                      />
-                    </template>
-                  </li>
-                  <div class="flex justify-between">
-                    <span
-                      class="text-base font-medium text-black dark:text-white"
-                      >{{ knowledge.dataName[index] }}</span
-                    >
-                    <span
-                      class="text-sm font-medium text-black dark:text-white"
-                      >{{ knowledge.dataValue[index] + "%" }}</span
-                    >
-                  </div>
-                  <div
-                    class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700"
+                  {{ knowledge.name }}
+                </h5>
+              </div>
+              <div class="flow-root">
+                <ul
+                  role="list"
+                  class="divide-y divide-gray-200 dark:divide-gray-700"
+                >
+                  <template
+                    v-for="(img, index) of knowledge.dataImg"
+                    :key="index"
                   >
-                    <div
-                      class="bg-emerald-600 h-2.5 rounded-full"
-                      :style="{ width: knowledge.dataValue[index] + '%' }"
-                    ></div>
-                  </div>
-                </template>
-              </ul>
+                    <li class="py-3 sm:py-4">
+                      <div class="flex items-center space-x-8">
+                        <div class="flex-shrink-0">
+                          <font-awesome-icon
+                            :icon="img"
+                            class="w-12 h-12 fill-current text-black dark:text-white mx-2"
+                          />
+                        </div>
+                        <div class="flex-1 min-w-0">
+                          <p
+                            class="text-lg font-medium text-gray-900 truncate dark:text-white"
+                          >
+                            {{ knowledge.dataName[index] }}
+                          </p>
+                        </div>
+                      </div>
+                    </li>
+                  </template>
+                </ul>
+              </div>
             </div>
           </template>
         </div>
