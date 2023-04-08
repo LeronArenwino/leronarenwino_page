@@ -139,7 +139,7 @@ const store = useDataStore();
         d="M0,192L30,197.3C60,203,120,213,180,181.3C240,149,300,75,360,69.3C420,64,480,128,540,181.3C600,235,660,277,720,272C780,267,840,213,900,176C960,139,1020,117,1080,122.7C1140,128,1200,160,1260,186.7C1320,213,1380,235,1410,245.3L1440,256L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z"
       ></path>
     </svg>
-    <section id="knowledge" class="bg-emerald-500 dark:bg-gray-900 py-16">
+    <section id="skills" class="bg-emerald-500 dark:bg-gray-900 py-16">
       <div class="py-16 px-4 mx-auto max-w-screen-xl lg:px-6">
         <div class="mx-auto max-w-screen-md text-center mb-8 lg:mb-12">
           <h1
@@ -154,9 +154,10 @@ const store = useDataStore();
             I know about this:
           </p>
         </div>
-
-        <div class="grid grid-cols-2 gap-4 place-content-center">
-          <template v-for="knowledge of store.knowledges" :key="knowledge.id">
+        <div
+          class="grid grid-cols-1 lg:grid-cols-2 gap-4 place-content-around place-items-center"
+        >
+          <template v-for="skill of store.skills" :key="skill.id">
             <div
               class="w-full max-w-md p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700"
             >
@@ -164,7 +165,7 @@ const store = useDataStore();
                 <h5
                   class="text-xl font-bold leading-none text-gray-900 dark:text-white"
                 >
-                  {{ knowledge.name }}
+                  {{ skill.name }}
                 </h5>
               </div>
               <div class="flow-root">
@@ -172,10 +173,7 @@ const store = useDataStore();
                   role="list"
                   class="divide-y divide-gray-200 dark:divide-gray-700"
                 >
-                  <template
-                    v-for="(img, index) of knowledge.dataImg"
-                    :key="index"
-                  >
+                  <template v-for="(img, index) of skill.dataImg" :key="index">
                     <li class="py-3 sm:py-4">
                       <div class="flex items-center space-x-8">
                         <div class="flex-shrink-0">
@@ -188,7 +186,7 @@ const store = useDataStore();
                           <p
                             class="text-lg font-medium text-gray-900 truncate dark:text-white"
                           >
-                            {{ knowledge.dataName[index] }}
+                            {{ skill.dataName[index] }}
                           </p>
                         </div>
                       </div>
