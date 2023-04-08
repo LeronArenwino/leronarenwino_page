@@ -74,7 +74,7 @@ const store = useDataStore();
                   }}</time
                 >
                 <h3
-                  class="text-2xl font-semibold text-gray-900 dark:text-white"
+                  class="text-2xl font-semibold text-gray-900 dark:text-white mb-2"
                 >
                   {{ project.name
                   }}<span
@@ -87,11 +87,13 @@ const store = useDataStore();
                   >{{ project.development }}</span
                 >
                 <p
-                  class="mb-4 text-base font-normal text-white dark:text-gray-400"
+                  class="my-4 text-base font-normal text-white dark:text-gray-400"
                 >
                   {{ project.description }}
                 </p>
-                <div class="flex items-center space-x-4">
+                <div
+                  class="flex flex-col md:flex-row items-start md:items-center md:space-x-4 space-y-2 md:space-y-0"
+                >
                   <template
                     v-if="
                       project.link_github != '' &&
