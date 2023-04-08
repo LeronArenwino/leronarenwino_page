@@ -75,8 +75,8 @@ app.use(pinia);
 app.component("font-awesome-icon", FontAwesomeIcon);
 app.mount("#app");
 
-var themeToggleDarkIcon = document.getElementById("theme-toggle-dark-icon");
-var themeToggleLightIcon = document.getElementById("theme-toggle-light-icon");
+const themeToggleDarkIcon = document.getElementById("theme-toggle-dark-icon");
+const themeToggleLightIcon = document.getElementById("theme-toggle-light-icon");
 
 // Change the icons inside the button based on previous settings
 if (
@@ -89,7 +89,7 @@ if (
   themeToggleDarkIcon.classList.remove("hidden");
 }
 
-var themeToggleBtn = document.getElementById("theme-toggle");
+const themeToggleBtn = document.getElementById("theme-toggle");
 
 themeToggleBtn.addEventListener("click", function () {
   // toggle icons inside button
