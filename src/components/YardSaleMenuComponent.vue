@@ -123,6 +123,7 @@
       </div>
     </nav>
     <aside
+      aria-label="YardSale Menu"
       id="shoppingCartContainer"
       class="bg-emerald-400"
       :class="{ inactive: shoppingCartStatus }"
@@ -154,6 +155,7 @@
     </aside>
     <template v-if="productData != null">
       <aside
+        aria-label="YardSale Menu"
         id="productDetail"
         class="bg-emerald-400 product-detail"
         :class="{ inactive: productDetailStatus }"
