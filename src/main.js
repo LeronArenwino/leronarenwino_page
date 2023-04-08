@@ -21,6 +21,9 @@ import {
   faJs,
   faVuejs,
   faBootstrap,
+  faGit,
+  faReact,
+  faNpm,
 } from "@fortawesome/free-brands-svg-icons";
 import {
   faMoon,
@@ -32,6 +35,8 @@ import {
   faCaretLeft,
   faXmark,
   faArrowRight,
+  faC,
+  faCode,
 } from "@fortawesome/free-solid-svg-icons";
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 
@@ -46,6 +51,8 @@ library.add(
   faCaretLeft,
   faXmark,
   faArrowRight,
+  faC,
+  faCode,
   faLinkedin,
   faGithub,
   faTwitter,
@@ -54,6 +61,9 @@ library.add(
   faJs,
   faVuejs,
   faBootstrap,
+  faGit,
+  faReact,
+  faNpm,
   faEnvelope
 );
 
