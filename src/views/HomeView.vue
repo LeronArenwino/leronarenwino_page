@@ -165,7 +165,7 @@ const store = useDataStore();
                 <h5
                   class="text-xl font-bold leading-none text-gray-900 dark:text-white"
                 >
-                  {{ skill.name }}
+                  {{ skill.name }} {{ skill.emoji }}
                 </h5>
               </div>
               <div class="flow-root">
@@ -175,20 +175,16 @@ const store = useDataStore();
                 >
                   <template v-for="(img, index) of skill.dataImg" :key="index">
                     <li class="py-3 sm:py-4">
-                      <div class="flex items-center space-x-8">
-                        <div class="flex-shrink-0">
-                          <font-awesome-icon
-                            :icon="img"
-                            class="w-12 h-12 fill-current text-black dark:text-white mx-2"
-                          />
-                        </div>
-                        <div class="flex-1 min-w-0">
-                          <p
-                            class="text-lg font-medium text-gray-900 truncate dark:text-white"
-                          >
-                            {{ skill.dataName[index] }}
-                          </p>
-                        </div>
+                      <div class="flex items-center justify-center space-x-8">
+                        <font-awesome-icon
+                          :icon="img"
+                          class="w-12 h-12 fill-current text-black dark:text-white mx-2"
+                        />
+                        <p
+                          class="text-lg font-medium text-gray-900 truncate dark:text-white"
+                        >
+                          {{ skill.dataName[index] }}
+                        </p>
                       </div>
                     </li>
                   </template>
