@@ -4,16 +4,15 @@
       <router-link to="/"
         ><a
           class="flex justify-center items-center text-2xl font-semibold text-black dark:text-white"
-          ><img
-            src="../assets/logo.png"
-            class="mr-3 h-6 sm:h-9"
-            alt="Leron Logo"
-          />
+        >
           LeronArenwino
         </a></router-link
       >
-      <p class="my-6 text-gray-800 dark:text-gray-200">
+      <p class="my-4 text-xl text-gray-800 dark:text-gray-200">
         Website with all information about me.
+      </p>
+      <p class="my-4 text-md text-gray-800 dark:text-gray-200">
+        You can contact with me in:
       </p>
       <ul
         class="flex flex-wrap justify-center items-center text-gray-900 dark:text-white"
@@ -22,30 +21,30 @@
           <a target="_blank" href="https://www.linkedin.com/in/leronarenwino/"
             ><font-awesome-icon
               icon="fa-brands fa-linkedin"
-              class="w-16 h-16 fill-current text-black dark:text-white mx-2"
+              class="w-8 h-8 fill-current text-black dark:text-white mx-2"
           /></a>
         </li>
         <li class="flex justify-center items-center">
           <a target="_blank" href="https://github.com/LeronArenwino"
             ><font-awesome-icon
               icon="fa-brands fa-github"
-              class="w-16 h-16 fill-current text-black dark:text-white mx-2"
+              class="w-8 h-8 fill-current text-black dark:text-white mx-2"
           /></a>
         </li>
         <li class="flex justify-center items-center">
           <a target="_blank" href="https://twitter.com/LeronArenwino"
             ><font-awesome-icon
               icon="fa-brands fa-twitter"
-              class="w-16 h-16 fill-current text-black dark:text-white mx-2"
+              class="w-8 h-8 fill-current text-black dark:text-white mx-2"
           /></a>
         </li>
       </ul>
-      <span class="text-sm text-gray-900 sm:text-center dark:text-gray-300"
-        >© 2018-2022
+      <p class="text-sm text-gray-900 sm:text-center dark:text-gray-300 py-4">
+        2018-2023
         <a class="hover:underline"
           ><router-link to="/">Francisco Dueñas</router-link></a
-        >. All Rights Reserved.</span
-      >
+        >.
+      </p>
     </div>
   </footer>
 </template>
