@@ -18,21 +18,30 @@
         class="flex flex-wrap justify-center items-center text-gray-900 dark:text-white"
       >
         <li class="flex justify-center items-center">
-          <a target="_blank" href="https://www.linkedin.com/in/leronarenwino/"
+          <a
+            rel="noopener"
+            target="_blank"
+            href="https://www.linkedin.com/in/leronarenwino/"
             ><font-awesome-icon
               icon="fa-brands fa-linkedin"
               class="w-8 h-8 fill-current text-black dark:text-white mx-2"
           /></a>
         </li>
         <li class="flex justify-center items-center">
-          <a target="_blank" href="https://github.com/LeronArenwino"
+          <a
+            rel="noopener"
+            target="_blank"
+            href="https://github.com/LeronArenwino"
             ><font-awesome-icon
               icon="fa-brands fa-github"
               class="w-8 h-8 fill-current text-black dark:text-white mx-2"
           /></a>
         </li>
         <li class="flex justify-center items-center">
-          <a target="_blank" href="https://twitter.com/LeronArenwino"
+          <a
+            rel="noopener"
+            target="_blank"
+            href="https://twitter.com/LeronArenwino"
             ><font-awesome-icon
               icon="fa-brands fa-twitter"
               class="w-8 h-8 fill-current text-black dark:text-white mx-2"
