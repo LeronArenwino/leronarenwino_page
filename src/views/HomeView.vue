@@ -78,10 +78,14 @@ const store = useDataStore();
                 >
                   {{ project.name
                   }}<span
-                    class="bg-blue-100 text-emerald-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-emerald-900 dark:text-emerald-300 ml-3"
-                    >Development with {{ project.development }}</span
+                    class="hidden md:inline bg-blue-100 text-emerald-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-emerald-900 dark:text-emerald-300 ml-3"
+                    >{{ project.development }}</span
                   >
                 </h3>
+                <span
+                  class="inline md:hidden bg-blue-100 text-emerald-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-emerald-900 dark:text-emerald-300 ml-3"
+                  >{{ project.development }}</span
+                >
                 <p
                   class="mb-4 text-base font-normal text-white dark:text-gray-400"
                 >
@@ -163,7 +167,7 @@ const store = useDataStore();
             >
               <div class="flex items-center justify-center mb-4">
                 <h5
-                  class="text-xl font-bold leading-none text-gray-900 dark:text-white"
+                  class="text-center text-xl font-bold leading-none text-gray-900 dark:text-white"
                 >
                   {{ skill.name }} {{ skill.emoji }}
                 </h5>
