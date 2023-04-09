@@ -35,7 +35,7 @@ const store = useDataStore();
         d="M0,192L30,197.3C60,203,120,213,180,181.3C240,149,300,75,360,69.3C420,64,480,128,540,181.3C600,235,660,277,720,272C780,267,840,213,900,176C960,139,1020,117,1080,122.7C1140,128,1200,160,1260,186.7C1320,213,1380,235,1410,245.3L1440,256L1440,0L1410,0C1380,0,1320,0,1260,0C1200,0,1140,0,1080,0C1020,0,960,0,900,0C840,0,780,0,720,0C660,0,600,0,540,0C480,0,420,0,360,0C300,0,240,0,180,0C120,0,60,0,30,0L0,0Z"
       ></path>
     </svg>
-    <section id="portfolio" class="bg-transparent dark:bg-transparent py-16">
+    <section id="projects" class="bg-transparent dark:bg-transparent py-16">
       <div class="py-16 px-4 mx-auto max-w-screen-xl lg:px-6">
         <div class="mx-auto max-w-screen-sm text-center lg:mb-16 mb-8">
           <h1
