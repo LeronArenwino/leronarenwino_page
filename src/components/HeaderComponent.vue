@@ -6,16 +6,23 @@
       <div
         class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl"
       >
-        <router-link to="/">
-          <font-awesome-icon
-            class="dark:text-white w-3 h-3"
-            icon="fa-solid fa-house"
-        /></router-link>
+        <button
+          type="button"
+          class="w-10 h-10 text-black bg-emerald-300 -400 hover:bg-emerald-200 dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700 rounded-lg text-sm p-2.5"
+        >
+          <router-link to="/">
+            <font-awesome-icon
+              class="dark:text-white w-3 h-3"
+              icon="fa-solid fa-house"
+              beat
+              style="--fa-animation-duration: 2s; --fa-beat-scale: 1.5"
+          /></router-link>
+        </button>
         <div class="flex items-center lg:order-2">
           <button
             id="theme-toggle"
             type="button"
-            class="w-10 h-10 text-black bg-emerald-300 -400 hover:bg-gray-700 hover:text-white dark:bg-gray-800 dark:text-white dark:hover:bg-emerald-300 dark:hover:text-black rounded-lg text-sm p-2.5"
+            class="w-10 h-10 text-black bg-emerald-300 -400 hover:bg-emerald-200 dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700 rounded-lg text-sm p-2.5"
             @click="getColorTheme"
           >
             <font-awesome-icon
@@ -34,7 +41,10 @@
             />
           </button>
         </div>
-        <div class="flex items-center lg:hidden lg:order-3">
+        <div
+          v-show="$route.path == '/'"
+          class="flex items-center lg:hidden lg:order-3"
+        >
           <button
             data-collapse-toggle="navbar-default"
             type="button"
@@ -46,50 +56,37 @@
           </button>
         </div>
         <div
+          v-show="$route.path == '/'"
           class="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1"
           id="navbar-default"
         >
           <ul
             class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0"
           >
-            <template v-if="$route.path == '/'">
-              <li>
-                <a
-                  class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-emerald-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
-                  aria-current="page"
-                  href="#app"
-                  >Home</a
-                >
-              </li>
-              <li>
-                <a
-                  class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-emerald-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
-                  aria-current="page"
-                  href="#portfolio"
-                  >Projects</a
-                >
-              </li>
-              <li>
-                <a
-                  class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-emerald-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
-                  aria-current="page"
-                  href="#skills"
-                  >Skills</a
-                >
-              </li>
-            </template>
-            <template v-else>
-              <li>
-                <router-link to="/">
-                  <a
-                    class="block py-2 pr-4 pl-3 text-white bg-emerald-700 rounded md:bg-transparent md:text-emerald-700 md:p-0 dark:text-white"
-                    aria-current="page"
-                    href=""
-                    >Home</a
-                  >
-                </router-link>
-              </li>
-            </template>
+            <li>
+              <a
+                class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-emerald-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
+                aria-current="page"
+                href="#app"
+                >Overview</a
+              >
+            </li>
+            <li>
+              <a
+                class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-emerald-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
+                aria-current="page"
+                href="#portfolio"
+                >Projects</a
+              >
+            </li>
+            <li>
+              <a
+                class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-emerald-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
+                aria-current="page"
+                href="#skills"
+                >Skills</a
+              >
+            </li>
           </ul>
         </div>
       </div>
