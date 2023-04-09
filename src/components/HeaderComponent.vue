@@ -13,6 +13,29 @@
         /></router-link>
         <div class="flex items-center lg:order-2">
           <button
+            id="theme-toggle"
+            type="button"
+            class="w-10 h-10 text-black bg-emerald-300 -400 hover:bg-gray-700 hover:text-white dark:bg-gray-800 dark:text-white dark:hover:bg-emerald-300 dark:hover:text-black rounded-lg text-sm p-2.5"
+            @click="getColorTheme"
+          >
+            <font-awesome-icon
+              id="theme-toggle-dark-icon"
+              icon="fa-solid fa-moon"
+              class="hidden fill-current"
+              beat
+              style="--fa-animation-duration: 2s; --fa-beat-scale: 1.5"
+            />
+            <font-awesome-icon
+              id="theme-toggle-light-icon"
+              icon="fa-solid fa-sun"
+              class="hidden fill-current"
+              beat
+              style="--fa-animation-duration: 2s; --fa-beat-scale: 1.5"
+            />
+          </button>
+        </div>
+        <div class="flex items-center lg:hidden lg:order-3">
+          <button
             data-collapse-toggle="navbar-default"
             type="button"
             class="inline-flex items-center text-sm text-dark rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-600"
@@ -22,7 +45,6 @@
             <font-awesome-icon class="menu" icon="fa-solid fa-bars" />
           </button>
         </div>
-
         <div
           class="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1"
           id="navbar-default"
@@ -72,37 +94,6 @@
         </div>
       </div>
     </nav>
-    <button
-      data-tooltip-target="tooltip-left"
-      data-tooltip-placement="left"
-      id="theme-toggle"
-      type="button"
-      class="w-10 h-10 text-black bg-emerald-300 -400 hover:bg-gray-900 hover:text-white dark:bg-gray-700 dark:text-white dark:hover:bg-emerald-300 dark:hover:text-black rounded-lg text-sm p-2.5 fixed bottom-0 right-0 z-20 mx-2 my-2"
-      @click="getColorTheme"
-    >
-      <font-awesome-icon
-        id="theme-toggle-dark-icon"
-        icon="fa-solid fa-moon"
-        class="hidden fill-current"
-        beat
-        style="--fa-animation-duration: 2s; --fa-beat-scale: 1.5"
-      />
-      <font-awesome-icon
-        id="theme-toggle-light-icon"
-        icon="fa-solid fa-sun"
-        class="hidden fill-current"
-        beat
-        style="--fa-animation-duration: 2s; --fa-beat-scale: 1.5"
-      />
-    </button>
-    <div
-      id="tooltip-left"
-      role="tooltip"
-      class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 transition-opacity duration-300 tooltip dark:bg-emerald-300 dark:text-black"
-    >
-      {{ colorTheme }}
-      <div class="tooltip-arrow" data-popper-arrow></div>
-    </div>
   </header>
 </template>
 <script>
