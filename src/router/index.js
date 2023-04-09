@@ -9,6 +9,7 @@ const router = createRouter({
       path: "/",
       name: "home",
       component: HomeView,
+      meta: { toTop: true },
       alias: ["/home"],
     },
     {
@@ -24,6 +25,7 @@ const router = createRouter({
       name: "yardsale",
       redirect: "/yardsale/home",
       component: () => import("../views/yardsale/YardSaleView.vue"),
+      meta: { toTop: true },
       children: [
         {
           path: "home",
@@ -63,6 +65,13 @@ const router = createRouter({
       redirect: "404",
     },
   ],
+  scrollBehavior(to) {
+    const scroll = {};
+
+    if (to.meta.toTop) scroll.top = 0;
+
+    return scroll;
+  },
 });
 
 export default router;
