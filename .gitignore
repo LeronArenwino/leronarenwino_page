@@ -28,3 +28,6 @@ coverage
 *.sw?
 
 *.exe
+
+.env
+.env.production
