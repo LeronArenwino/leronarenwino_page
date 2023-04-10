@@ -43,8 +43,8 @@ const store = useDataStore();
           >
             <span
               class="font-mono text-transparent font-medium bg-clip-text bg-black dark:bg-white"
-              >Projects </span
-            >😄
+              >Projects
+            </span>
           </h1>
           <p class="font-light text-black sm:text-xl dark:text-gray-400">
             Projects I have worked on!
@@ -154,7 +154,7 @@ const store = useDataStore();
             <span
               class="text-transparent font-medium bg-clip-text bg-black dark:bg-white"
               >Skills</span
-            >🤓
+            >
           </h1>
           <p class="mb-5 font-light text-black sm:text-xl dark:text-gray-400">
             I know about this:
