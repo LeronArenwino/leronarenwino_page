@@ -16,7 +16,7 @@ const store = useDataStore();
           class="my-4 text-4xl text-black md:text-6xl lg:text-8xl dark:text-white font-medium"
         >
           <span class="text-transparent bg-clip-text bg-black dark:bg-white"
-            >Hello, welcome!</span
+            >Hello, I'm Francisco Dueñas!</span
           >😉
         </h1>
         <p
