@@ -1,7 +1,7 @@
 {
   "projects": {
-    "default": "leronarenwino",
-    "leronarenwino": "leronarenwino"
+    "default": "leronarenwinoapp",
+    "leronarenwinoapp": "leronarenwinoapp"
   },
   "targets": {},
   "etags": {}
