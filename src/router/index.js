@@ -58,6 +58,7 @@ const router = createRouter({
       name: "yardsale",
       redirect: "/yardsale/home",
       component: () => import("../views/yardsale/YardSaleView.vue"),
+      meta: { toTop: true },
       children: yardsaleChildren,
     },
     { path: "/404", component: Error },
