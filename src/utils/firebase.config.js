@@ -1,6 +1,6 @@
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDS-FPowDCyvW2HQ6LifDiJUKNi-kFBnYI",
+  apiKey: import.meta.env.VITE_VUE_APP_API_KEY,
   authDomain: "leronarenwino.firebaseapp.com",
   projectId: "leronarenwino",
   storageBucket: "leronarenwino.appspot.com",
