@@ -15,7 +15,7 @@
               class="dark:text-white w-3 h-3"
               icon="fa-solid fa-house"
               beat
-              style="--fa-animation-duration: 2s; --fa-beat-scale: 1.5"
+              style="--fa-animation-duration: 5s; --fa-beat-scale: 1.5"
           /></router-link>
         </button>
         <div class="flex items-center lg:order-2">
