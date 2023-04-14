@@ -30,14 +30,14 @@
               icon="fa-solid fa-moon"
               class="hidden fill-current"
               beat
-              style="--fa-animation-duration: 2s; --fa-beat-scale: 1.5"
+              style="--fa-animation-duration: 5s; --fa-beat-scale: 1.5"
             />
             <font-awesome-icon
               id="theme-toggle-light-icon"
               icon="fa-solid fa-sun"
               class="hidden fill-current"
               beat
-              style="--fa-animation-duration: 2s; --fa-beat-scale: 1.5"
+              style="--fa-animation-duration: 5s; --fa-beat-scale: 1.5"
             />
           </button>
         </div>
