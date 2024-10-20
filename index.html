@@ -8,18 +8,20 @@
   <title>LeronArenwino</title>
   <script src="https://unpkg.com/flowbite@1.4.4/dist/flowbite.js"></script>
   <script>
-    // On page load or when changing themes, best to add inline in `head` to avoid FOUC
-    if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    // On page load or when changing themes
+    const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    const currentTheme = localStorage.getItem('color-theme');
+
+    if (currentTheme === 'dark' || (!currentTheme && prefersDarkScheme.matches)) {
       document.documentElement.classList.add('dark');
     } else {
-      document.documentElement.classList.remove('dark')
+      document.documentElement.classList.remove('dark');
     }
   </script>
 </head>
 
 <body>
-  <div id="app" class="bg-white dark:bg-gray-700">
-  </div>
+  <div id="app" class="bg-white dark:bg-gray-700"></div>
   <script type="module" src="/src/main.js"></script>
 </body>
 
