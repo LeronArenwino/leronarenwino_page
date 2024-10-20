@@ -2,39 +2,6 @@ import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import Error from "../views/ErrorView.vue";
 
-const yardsaleChildren = [
-  {
-    path: "home",
-    name: "yardsale-home",
-    component: () => import("../views/yardsale/YardSaleHomeView.vue"),
-  },
-  {
-    path: "email",
-    name: "yardsale-email",
-    component: () => import("../views/yardsale/YardSaleEmailView.vue"),
-  },
-  {
-    path: "password",
-    name: "yardsale-password",
-    component: () => import("../views/yardsale/YardSalePasswordView.vue"),
-  },
-  {
-    path: "login",
-    name: "yardsale-login",
-    component: () => import("../views/yardsale/YardSaleLoginView.vue"),
-  },
-  {
-    path: "signup",
-    name: "yardsale-signup",
-    component: () => import("../views/yardsale/YardSaleSignUpView.vue"),
-  },
-  {
-    path: "account",
-    name: "yardsale-account",
-    component: () => import("../views/yardsale/YardSaleAccountView.vue"),
-  },
-];
-
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -52,14 +19,6 @@ const router = createRouter({
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
       component: () => import("../views/AboutView.vue"),
-    },
-    {
-      path: "/yardsale",
-      name: "yardsale",
-      redirect: "/yardsale/home",
-      component: () => import("../views/yardsale/YardSaleView.vue"),
-      meta: { toTop: true },
-      children: yardsaleChildren,
     },
     { path: "/404", component: Error },
     {
